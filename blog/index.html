@@ -83,192 +83,7 @@ a { text-decoration: none; color: inherit; transition: all var(--transition-base
 img { max-width: 100%; display: block; height: auto; }
 button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 
-/* ══════════════════════════════════════════════════════════════
-   SECTION 2: HEADER
-   ══════════════════════════════════════════════════════════════ */
 
-.header {
-  background: rgba(255,255,255,.98);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  transition: all var(--transition-base);
-}
-
-.header.scrolled {
-  box-shadow: var(--shadow-lg);
-  background: rgba(255,255,255,1);
-}
-
-.header-main {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 40px;
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  transition: transform var(--transition-base);
-  flex-shrink: 0;
-  z-index: 1010;
-}
-
-.logo:hover { transform: scale(1.05); }
-
-.logo img {
-  height: 46px;
-  width: auto;
-}
-
-/* DESKTOP NAV */
-.nav {
-  display: flex;
-  gap: 36px;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.nav-link {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--gray-700);
-  padding: 8px 0;
-  position: relative;
-  white-space: nowrap;
-  transition: color var(--transition-base);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--gradient-1);
-  transition: width var(--transition-base);
-}
-
-.nav-link:hover,
-.nav-link.active { color: var(--primary); }
-.nav-link:hover::after,
-.nav-link.active::after { width: 100%; }
-
-/* HAMBURGER BUTTON */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  width: 44px;
-  height: 44px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 1010;
-  padding: 4px;
-  border-radius: var(--radius-lg);
-  transition: background var(--transition-base);
-}
-
-.hamburger:hover { background: var(--gray-100); }
-
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--dark);
-  border-radius: 2px;
-  transition: all .35s cubic-bezier(.34,1.56,.64,1);
-  transform-origin: center;
-}
-
-/* Hamburger → X animation */
-.hamburger.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-  transform: scaleX(0);
-}
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-/* MOBILE MENU OVERLAY */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(10,14,39,.97);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  z-index: 999;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .4s ease, visibility .4s ease;
-}
-
-.mobile-menu.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.mobile-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 0 40px;
-}
-
-.mobile-nav-link {
-  font-family: var(--font-display);
-  font-size: clamp(28px, 7vw, 42px);
-  font-weight: 700;
-  color: rgba(255,255,255,.7);
-  padding: 14px 0;
-  text-align: center;
-  width: 100%;
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  transition: color var(--transition-base), transform var(--transition-base);
-  letter-spacing: 1px;
-}
-
-.mobile-nav-link:last-child { border-bottom: none; }
-
-.mobile-nav-link:hover,
-.mobile-nav-link.active {
-  color: var(--primary);
-  transform: translateX(8px);
-}
-
-.mobile-menu-footer {
-  margin-top: 40px;
-  text-align: center;
-  color: rgba(255,255,255,.3);
-  font-size: 13px;
-}
 
 /* ══════════════════════════════════════════════════════════════
    SECTION 3: BLOG HERO
@@ -498,152 +313,6 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 
 .blog-post-link:hover { gap: 16px; }
 
-/* ══════════════════════════════════════════════════════════════
-   SECTION 5: FOOTER
-   ══════════════════════════════════════════════════════════════ */
-
-.footer {
-  background: #ffffff;
-  color: #111;
-  padding: 60px 0 0;
-  border-top: 1px solid #eaeaea;
-}
-
-.footer-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.footer-col:first-child { max-width: 420px; }
-
-.footer-col h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 22px;
-  font-family: var(--font-display);
-  color: #111;
-}
-
-.footer-col p {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.8;
-}
-
-.footer-col a {
-  display: block;
-  font-size: 15px;
-  color: #444;
-  margin-bottom: 13px;
-  transition: .25s ease;
-}
-
-.footer-col a:hover {
-  color: #ff7a18;
-  transform: translateX(5px);
-}
-
-.footer-logo {
-  max-width: 160px;
-  height: auto;
-  margin-bottom: 18px;
-}
-
-.footer-subscribe { max-width: 380px; width: 100%; }
-
-.footer-subscribe h4 {
-  font-size: 16px;
-  margin-bottom: 14px;
-  font-weight: 600;
-  color: #111;
-}
-
-.subscribe-box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border: 2px solid #e0e0e0;
-  border-radius: 50px;
-  overflow: hidden;
-  background: #f9f9f9;
-}
-
-.subscribe-box input {
-  flex: 1;
-  padding: 13px 18px;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  font-family: var(--font-primary);
-  background: transparent;
-  min-width: 0;
-}
-
-.subscribe-box button {
-  padding: 13px 20px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: .3s ease;
-  flex-shrink: 0;
-}
-
-.subscribe-box button:hover { background: #ff7a18; }
-
-.footer-bottom {
-  margin-top: 40px;
-  padding: 20px 40px;
-  border-top: 1px solid #eaeaea;
-  text-align: center;
-}
-
-.footer-bottom p {
-  font-size: 14px;
-  color: #555;
-  margin: 0;
-}
-
-/* ══════════════════════════════════════════════════════════════
-   SECTION 6: SCROLL TO TOP
-   ══════════════════════════════════════════════════════════════ */
-
-.scroll-top {
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
-  width: 52px;
-  height: 52px;
-  background: var(--gradient-1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all var(--transition-bounce);
-  z-index: 1030;
-  box-shadow: var(--shadow-primary);
-  border: none;
-}
-
-.scroll-top.show { opacity: 1; visibility: visible; }
-.scroll-top:hover {
-  transform: translateY(-6px) scale(1.1);
-  box-shadow: var(--shadow-primary-lg);
-}
 
 /* ══════════════════════════════════════════════════════════════
    SECTION 7: RESPONSIVE — TABLET (1024px)
@@ -778,32 +447,8 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 <!-- ══════════════════════════════════════════════════════════════
      HEADER
      ══════════════════════════════════════════════════════════════ -->
-<header class="header" id="header">
-  <div class="header-main">
+<div id="header-placeholder"></div>
 
-    <!-- Logo -->
-    <a href="https://affiliatenetwork.buzz/" class="logo">
-      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="Affiliate Network">
-    </a>
-
-    <!-- Desktop Nav (hidden on tablet/mobile) -->
-    <nav class="nav">
-      <a href="https://affiliatenetwork.buzz/" class="nav-link">Home</a>
-      <a href="https://www.vcommission.com/affiliates/" class="nav-link">Affiliates</a>
-      <a href="https://www.vcommission.com/advertisers/" class="nav-link">Advertisers</a>
-      <a href="https://affiliatenetwork.buzz/blog" class="nav-link active">Blog</a>
-      <a href="https://www.vcommission.com/case-studies/" class="nav-link">Case Studies</a>
-    </nav>
-
-    <!-- Hamburger button (visible on tablet/mobile) -->
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-  </div>
-</header>
 
 <!-- ══════════════════════════════════════════════════════════════
      MOBILE MENU OVERLAY
@@ -1103,46 +748,8 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 <!-- ══════════════════════════════════════════════════════════════
      FOOTER
      ══════════════════════════════════════════════════════════════ -->
-<footer class="footer">
-  <div class="footer-grid">
+<div id="footer-placeholder"></div>
 
-    <div class="footer-col">
-      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="Affiliate Network" class="footer-logo">
-      <p>Stay ahead in affiliate marketing with the latest trends, strategies, and tools. Discover top affiliate programs and expert insights to grow and earn more online.</p>
-    </div>
-
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <a href="https://affiliatenetwork.buzz/">Home</a>
-      <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
-      <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
-      <a href="https://affiliatenetwork.buzz/blog">Blog</a>
-    </div>
-
-    <div class="footer-col">
-      <div class="footer-subscribe">
-        <h4>Subscribe to our email alerts!</h4>
-        <div class="subscribe-box">
-          <input type="email" name="email" id="footerEmail" placeholder="Enter your email" required>
-          <button type="button" onclick="handleSubscribe()"><i class="fas fa-arrow-right"></i></button>
-        </div>
-        <p id="footer-msg" style="margin-top:10px;font-size:13px;display:none;"></p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2026 AffiliateNetwork.buzz — All Rights Reserved.</p>
-  </div>
-</footer>
-
-<!-- ══════════════════════════════════════════════════════════════
-     SCROLL TO TOP
-     ══════════════════════════════════════════════════════════════ -->
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
 
 <!-- ══════════════════════════════════════════════════════════════
      JAVASCRIPT
@@ -1154,104 +761,35 @@ if (window.history.replaceState) {
   window.history.replaceState(null, null, window.location.href);
 }
 
-/* ── Header scroll shadow + scroll-to-top button ── */
-window.addEventListener('scroll', function () {
-  var scrollY = window.scrollY;
-  var header = document.getElementById('header');
-  var scrollTopBtn = document.getElementById('scrollTop');
+</script>
 
-  if (scrollY > 60) header.classList.add('scrolled');
-  else header.classList.remove('scrolled');
+<!-- Load shared header & footer -->
+<script>
+  fetch('/header.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('header-placeholder').innerHTML = html;
+      const s = document.getElementById('header-placeholder').querySelectorAll('script');
+      s.forEach(o => {
+        const n = document.createElement('script');
+        n.textContent = o.textContent;
+        document.body.appendChild(n);
+        o.remove();
+      });
+    });
 
-  if (scrollY > 400) scrollTopBtn.classList.add('show');
-  else scrollTopBtn.classList.remove('show');
-});
-
-/* ── Hamburger / Mobile Menu Toggle ── */
-var hamburger = document.getElementById('hamburger');
-var mobileMenu = document.getElementById('mobileMenu');
-var isMenuOpen = false;
-
-function openMenu() {
-  isMenuOpen = true;
-  hamburger.classList.add('active');
-  hamburger.setAttribute('aria-expanded', 'true');
-  mobileMenu.classList.add('open');
-  document.body.style.overflow = 'hidden'; // prevent background scroll
-}
-
-function closeMenu() {
-  isMenuOpen = false;
-  hamburger.classList.remove('active');
-  hamburger.setAttribute('aria-expanded', 'false');
-  mobileMenu.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-hamburger.addEventListener('click', function () {
-  if (isMenuOpen) closeMenu();
-  else openMenu();
-});
-
-/* Close mobile menu when a link is clicked */
-document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
-  link.addEventListener('click', closeMenu);
-});
-
-/* Close mobile menu on Escape key */
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && isMenuOpen) closeMenu();
-});
-
-/* Close mobile menu if screen resizes to desktop */
-window.addEventListener('resize', function () {
-  if (window.innerWidth > 1024 && isMenuOpen) closeMenu();
-});
-
-/* ── Footer Subscribe ── */
-function handleSubscribe() {
-  var input = document.getElementById('footerEmail');
-  var msg = document.getElementById('footer-msg');
-  var email = input.value.trim();
-
-  if (!email) {
-    msg.style.display = 'block';
-    msg.style.color = 'red';
-    msg.textContent = 'Please enter your email address.';
-    return;
-  }
-
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    msg.style.display = 'block';
-    msg.style.color = 'red';
-    msg.textContent = 'Please enter a valid email address.';
-    return;
-  }
-
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({ 'form-name': 'footer-subscribe', email: email }).toString()
-  })
-  .then(function () {
-    msg.style.display = 'block';
-    msg.style.color = 'green';
-    msg.textContent = 'Thank you for subscribing!';
-    input.value = '';
-    window.history.replaceState(null, null, window.location.href);
-    setTimeout(function () { msg.style.display = 'none'; }, 3000);
-  })
-  .catch(function () {
-    msg.style.display = 'block';
-    msg.style.color = 'red';
-    msg.textContent = 'Something went wrong. Please try again.';
-  });
-}
-
-document.getElementById('footerEmail').addEventListener('keydown', function (e) {
-  if (e.key === 'Enter') { e.preventDefault(); handleSubscribe(); }
-});
-
+  fetch('/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+      const s = document.getElementById('footer-placeholder').querySelectorAll('script');
+      s.forEach(o => {
+        const n = document.createElement('script');
+        n.textContent = o.textContent;
+        document.body.appendChild(n);
+        o.remove();
+      });
+    });
 </script>
 </body>
 </html>
