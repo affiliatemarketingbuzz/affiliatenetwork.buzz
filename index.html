@@ -1,0 +1,1477 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BNH4X30BWK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BNH4X30BWK');
+</script>
+
+<title>Affiliate Network — Stay Ahead in Affiliate Marketing</title>
+<meta name="description" content="Stay ahead in affiliate marketing with the latest trends, strategies, and tools. Discover top affiliate programs and expert insights to grow and earn more online.">
+<link rel="icon" type="image/png" href="https://vcim.net/extra_mailer3/831_favicon%20(1).png">
+<link rel="canonical" href="https://affiliatenetwork.buzz/" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 1: RESET & CSS VARIABLES
+   ══════════════════════════════════════════════════════════════ */
+
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --primary: #FF6B35;
+  --primary-light: #FF8A5C;
+  --primary-dark: #E65A2E;
+  --secondary: #FFA600;
+  --dark: #0A0E27;
+  --dark-2: #1A1A2E;
+  --blue: #0F3460;
+  --gray-900: #1F2937;
+  --gray-700: #4B5563;
+  --gray-600: #6B7280;
+  --gray-500: #9CA3AF;
+  --gray-400: #D1D5DB;
+  --gray-300: #E5E7EB;
+  --gray-200: #F3F4F6;
+  --gray-100: #F9FAFB;
+  --white: #FFFFFF;
+  --gradient-1: linear-gradient(135deg, var(--primary), var(--secondary));
+  --gradient-2: linear-gradient(90deg, rgba(255,255,255,1) 1%, rgba(226,225,237,1) 26%, rgba(212,218,252,1) 51%, rgba(207,207,255,1) 75%, rgba(173,181,255,1) 100%);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.05);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,.12);
+  --shadow-xl: 0 20px 50px rgba(0,0,0,.15);
+  --shadow-primary: 0 10px 40px rgba(255,107,53,.3);
+  --shadow-primary-lg: 0 20px 60px rgba(255,107,53,.4);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+  --transition-base: .3s ease;
+  --transition-bounce: .5s cubic-bezier(.34,1.56,.64,1);
+  --transition-smooth: .8s cubic-bezier(.65,0,.35,1);
+  --font-primary: 'Poppins', sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --header-height: 80px;
+  --z-sticky: 1000;
+  --z-fixed: 1030;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 2: BASE
+   ══════════════════════════════════════════════════════════════ */
+
+html { scroll-behavior:smooth; scrollbar-width:thin; scrollbar-color:var(--primary) var(--dark); }
+::-webkit-scrollbar { width:6px; }
+::-webkit-scrollbar-track { background:var(--dark); }
+::-webkit-scrollbar-thumb { background:var(--gradient-1); border-radius:10px; }
+
+body {
+  font-family: var(--font-primary);
+  color: var(--dark);
+  background: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a { text-decoration:none; color:inherit; transition:all var(--transition-base); }
+img { max-width:100%; display:block; height:auto; }
+button { cursor:pointer; font-family:inherit; border:none; outline:none; }
+input,textarea,select { font-family:inherit; outline:none; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 3: UTILITIES
+   ══════════════════════════════════════════════════════════════ */
+
+.container { max-width:1400px; margin:0 auto; padding:0 40px; }
+.section { padding:100px 0; position:relative; }
+.text-gradient { background:var(--gradient-1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 4: ANIMATED BG ORBS
+   ══════════════════════════════════════════════════════════════ */
+
+.animated-bg { position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+
+.bg-orb { position:absolute; border-radius:50%; filter:blur(80px); animation:orbFloat 12s ease-in-out infinite; }
+.bg-orb-1 { width:600px; height:600px; background:rgba(255,107,53,.2); top:-20%; right:-10%; }
+.bg-orb-2 { width:500px; height:500px; background:rgba(255,166,0,.3); bottom:20%; left:-10%; animation-delay:2s; }
+.bg-orb-3 { width:450px; height:450px; background:rgba(0,217,255,.2); top:50%; left:50%; transform:translate(-50%,-50%); animation-delay:4s; }
+
+@keyframes orbFloat {
+  0%,100% { transform:translate(0,0) scale(1); }
+  25%  { transform:translate(100px,-100px) scale(1.1); }
+  50%  { transform:translate(0,-150px) scale(.9); }
+  75%  { transform:translate(-100px,-50px) scale(1.05); }
+}
+
+.bg-grid {
+  position:absolute; inset:0;
+  background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size:50px 50px;
+  opacity:.5;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 5: HEADER
+   ══════════════════════════════════════════════════════════════ */
+
+.header {
+  background: rgba(255,255,255,.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  transition: all var(--transition-base);
+}
+
+.header.scrolled {
+  box-shadow: var(--shadow-lg);
+  background: rgba(255,255,255,1);
+}
+
+.header-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  z-index: 1010;
+  transition: transform var(--transition-base);
+}
+.logo:hover { transform:scale(1.05); }
+.logo img { height:46px; width:auto; }
+
+/* DESKTOP NAV — centered via absolute */
+.nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-700);
+  padding: 8px 0;
+  position: relative;
+  white-space: nowrap;
+  transition: color var(--transition-base);
+}
+.nav-link::after {
+  content:'';
+  position:absolute;
+  bottom:0; left:0;
+  width:0; height:2px;
+  background:var(--gradient-1);
+  transition:width var(--transition-base);
+}
+.nav-link:hover,.nav-link.active { color:var(--primary); }
+.nav-link:hover::after,.nav-link.active::after { width:100%; }
+
+/* ── HAMBURGER BUTTON ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1010;
+  border-radius: var(--radius-lg);
+  transition: background var(--transition-base);
+  flex-shrink: 0;
+}
+.hamburger:hover { background:var(--gray-100); }
+.hamburger span {
+  display:block;
+  width:24px; height:2px;
+  background:var(--dark);
+  border-radius:2px;
+  transition:all .35s cubic-bezier(.34,1.56,.64,1);
+}
+.hamburger.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity:0; transform:scaleX(0); }
+.hamburger.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+/* ── MOBILE MENU OVERLAY ── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,14,39,.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s ease, visibility .4s ease;
+}
+.mobile-menu.open { opacity:1; visibility:visible; }
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-display);
+  font-size: clamp(26px,7vw,42px);
+  font-weight: 700;
+  color: rgba(255,255,255,.7);
+  padding: 14px 0;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  letter-spacing: 1px;
+  transition: color var(--transition-base), transform var(--transition-base);
+}
+.mobile-nav-link:last-child { border-bottom:none; }
+.mobile-nav-link:hover,.mobile-nav-link.active { color:var(--primary); transform:translateX(8px); }
+
+.mobile-menu-footer {
+  margin-top:40px;
+  text-align:center;
+  color:rgba(255,255,255,.3);
+  font-size:13px;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 6: BUTTONS
+   ══════════════════════════════════════════════════════════════ */
+
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:14px 32px;
+  font-size:14px;
+  font-weight:600;
+  border-radius:var(--radius-full);
+  transition:all var(--transition-base);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  cursor:pointer;
+}
+.btn-primary { background:var(--gradient-1); color:var(--white); box-shadow:var(--shadow-primary); }
+.btn-primary:hover { transform:translateY(-3px); box-shadow:var(--shadow-primary-lg); }
+.btn-outline { background:transparent; color:var(--primary); border:2px solid var(--primary); }
+.btn-outline:hover { background:var(--primary); color:var(--white); }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 7: HERO
+   ══════════════════════════════════════════════════════════════ */
+
+.hero {
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:var(--gradient-2);
+  overflow:hidden;
+  padding:60px 0;
+}
+
+.hero-content {
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 40px;
+  position:relative;
+  z-index:10;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+@keyframes heroSlideIn {
+  from { opacity:0; transform:translateX(-60px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+
+.hero-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(10px);
+  border:2px solid #ff980d;
+  padding:10px 20px;
+  border-radius:var(--radius-full);
+  color:#111;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:30px;
+}
+.hero-badge i { color:var(--secondary); }
+
+.hero-title {
+  font-family:var(--font-display);
+  font-size:clamp(36px,6vw,84px);
+  font-weight:900;
+  color:#111;
+  line-height:1.1;
+  margin-bottom:25px;
+  letter-spacing:-2px;
+  animation:heroSlideIn 1s var(--transition-smooth) .3s backwards;
+}
+.hero-title-gradient {
+  background:var(--gradient-1);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  display:inline-block;
+}
+
+.hero-subtitle {
+  font-size:clamp(16px,2vw,22px);
+  color:#111;
+  margin-bottom:20px;
+  font-weight:500;
+  animation:heroSlideIn 1s var(--transition-smooth) .4s backwards;
+}
+
+.hero-description {
+  font-size:17px;
+  color:#333;
+  line-height:1.8;
+  margin-bottom:40px;
+  max-width:600px;
+  animation:heroSlideIn 1s var(--transition-smooth) .5s backwards;
+}
+
+.hero-buttons {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  animation:heroSlideIn 1s var(--transition-smooth) .6s backwards;
+}
+
+.hero-visual {
+  position:relative;
+  animation:heroSlideIn 1s var(--transition-smooth) .7s backwards;
+}
+
+.hero-image img { width:100%; transform:scale(1.2); }
+
+.hero-decoration {
+  position:absolute;
+  border-radius:50%;
+  background:var(--gradient-1);
+  opacity:.3;
+  filter:blur(60px);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 8: STATS
+   ══════════════════════════════════════════════════════════════ */
+
+.stats {
+  background:var(--white);
+  padding:80px 0;
+  position:relative;
+  overflow:hidden;
+}
+.stats-header {
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 60px;
+  padding:0 40px;
+}
+.stats::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:1px;
+  background:var(--gradient-1);
+}
+
+.stats-grid {
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 40px;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:30px;
+}
+
+.stat-item {
+  text-align:center;
+  padding:36px 16px;
+  border-radius:var(--radius-xl);
+  background:var(--white);
+  border:2px solid var(--gray-200);
+  transition:all var(--transition-bounce);
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+}
+.stat-item::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:var(--gradient-1);
+  opacity:0;
+  transition:opacity var(--transition-base);
+}
+.stat-item:hover { border-color:var(--primary); transform:translateY(-12px); box-shadow:var(--shadow-xl); }
+.stat-item:hover::before { opacity:.05; }
+
+.stat-icon {
+  width:60px; height:60px;
+  margin:0 auto 16px;
+  border-radius:50%;
+  background:var(--gradient-1);
+  display:flex; align-items:center; justify-content:center;
+  font-size:26px; color:var(--white);
+  position:relative; z-index:1;
+  transition:transform var(--transition-base);
+}
+.stat-item:hover .stat-icon { transform:scale(1.1) rotate(10deg); }
+
+.stat-num {
+  font-family:var(--font-display);
+  font-size:clamp(28px,3vw,42px);
+  font-weight:900;
+  background:var(--gradient-1);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:8px;
+  position:relative; z-index:1;
+}
+
+.stat-label { font-size:13px; color:var(--gray-600); font-weight:600; position:relative; z-index:1; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 9: SECTION HEADER SHARED
+   ══════════════════════════════════════════════════════════════ */
+
+.section-header { text-align:center; margin-bottom:60px; position:relative; }
+
+.section-badge {
+  display:inline-block;
+  background:var(--gradient-1);
+  color:var(--white);
+  padding:8px 20px;
+  border-radius:var(--radius-full);
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:18px;
+}
+
+.section-title {
+  font-family:var(--font-display);
+  font-size:clamp(28px,4vw,48px);
+  font-weight:900;
+  color:var(--dark);
+  margin-bottom:18px;
+  letter-spacing:-1px;
+  line-height:1.2;
+}
+.section-title-gradient { background:var(--gradient-1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+
+.section-subtitle { font-size:17px; color:var(--gray-600); max-width:600px; margin:0 auto; line-height:1.7; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 10: AFFILIATE PROGRAMS SLIDER
+   ══════════════════════════════════════════════════════════════ */
+
+.affiliate-programs-section {
+  background:#ffffff;
+  padding:90px 0 100px;
+  position:relative;
+  overflow:hidden;
+}
+
+.ap-header {
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 50px;
+  padding:0 24px;
+}
+.ap-subtitle { font-family:'Inter','Poppins',sans-serif; font-size:17px; color:#6B7280; line-height:1.7; font-weight:400; }
+
+.ap-slider-wrapper { position:relative; max-width:1400px; margin:0 auto; padding:0 60px; }
+
+.ap-slider {
+  display:flex;
+  gap:24px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  padding:16px 4px 24px;
+  -ms-overflow-style:none;
+  scrollbar-width:none;
+}
+.ap-slider::-webkit-scrollbar { display:none; }
+
+.ap-arrow {
+  position:absolute;
+  top:50%; transform:translateY(-50%);
+  width:48px; height:48px;
+  border-radius:50%;
+  background:#ffffff;
+  border:1.5px solid #E5E7EB;
+  color:#374151;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer;
+  z-index:10;
+  transition:all .25s ease;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+}
+.ap-arrow:hover { background:#111827; color:#ffffff; border-color:#111827; box-shadow:0 6px 20px rgba(17,24,39,.18); transform:translateY(-50%) scale(1.05); }
+.ap-arrow-left { left:8px; }
+.ap-arrow-right { right:8px; }
+
+.ap-card {
+  flex:0 0 260px;
+  background:#ffffff;
+  border:1.5px solid #E5E7EB;
+  border-radius:16px;
+  padding:36px 24px 32px;
+  text-align:center;
+  display:flex; flex-direction:column; align-items:center;
+  transition:all .3s cubic-bezier(.25,.46,.45,.94);
+  cursor:pointer;
+}
+.ap-card:hover { transform:translateY(-8px); box-shadow:0 16px 48px rgba(0,0,0,.1); border-color:#D1D5DB; }
+
+.ap-card-logo {
+  width:88px; height:88px;
+  margin:0 auto 20px;
+  display:flex; align-items:center; justify-content:center;
+  background:#F9FAFB;
+  border-radius:16px;
+  border:1px solid #F3F4F6;
+  padding:14px;
+  transition:all .3s ease;
+}
+.ap-card:hover .ap-card-logo { background:#F3F4F6; transform:scale(1.05); }
+.ap-card-logo img { max-width:100%; max-height:100%; object-fit:contain; }
+
+.ap-card-name { font-family:'Inter','Poppins',sans-serif; font-size:17px; font-weight:700; color:#111827; margin-bottom:14px; letter-spacing:-.2px; line-height:1.3; }
+
+.ap-card-tag { display:inline-block; padding:5px 14px; font-size:11px; font-weight:600; letter-spacing:.3px; border-radius:50px; margin-bottom:18px; }
+.tag-blue   { background:#EFF6FF; color:#2563EB; }
+.tag-orange { background:#FEF3C7; color:#D97706; }
+.tag-green  { background:#ECFDF5; color:#059669; }
+.tag-purple { background:#F3E8FF; color:#7C3AED; }
+
+.ap-card-payout { font-size:14px; color:#6B7280; margin:0; line-height:1.5; }
+.ap-card-payout strong { color:#111827; font-weight:700; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 11: BOTTOM CTA (PROGRAMS)
+   ══════════════════════════════════════════════════════════════ */
+
+.ap-bottom-cta { text-align:center; margin-top:60px; padding:0 24px 20px; }
+.ap-bottom-cta-title { font-size:clamp(20px,3vw,26px); font-weight:700; color:#111827; margin-bottom:24px; letter-spacing:-.3px; }
+.ap-bottom-cta-btn {
+  display:inline-block;
+  padding:16px 42px;
+  background:#111827;
+  color:#ffffff;
+  font-size:15px; font-weight:600;
+  border-radius:50px;
+  letter-spacing:.2px;
+  transition:all .3s cubic-bezier(.25,.46,.45,.94);
+  box-shadow:0 4px 14px rgba(17,24,39,.15);
+}
+.ap-bottom-cta-btn:hover { background:#FF6B35; color:#ffffff; transform:translateY(-3px); box-shadow:0 10px 32px rgba(255,107,53,.35); }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 12: CLIENTS MARQUEE
+   ══════════════════════════════════════════════════════════════ */
+
+.clients { background:var(--white); padding:60px 0; overflow:hidden; position:relative; }
+
+.clients-marquee {
+  display:flex;
+  gap:50px;
+  animation:marqueeScroll 26s linear infinite;
+  width:max-content;
+}
+.clients-marquee:hover { animation-play-state:paused; }
+
+@keyframes marqueeScroll {
+  0%   { transform:translateX(0); }
+  100% { transform:translateX(-50%); }
+}
+
+.client-logo { height:48px; width:auto; transition:all var(--transition-base); flex-shrink:0; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 13: LATEST ARTICLES
+   ══════════════════════════════════════════════════════════════ */
+
+.latest-articles { background:var(--white); padding:80px 0; position:relative; }
+.latest-articles .section-header { max-width:1400px; margin:0 auto 40px; padding:0 40px; text-align:center; }
+
+.articles-grid {
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 40px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.article-card {
+  background:var(--white);
+  border-radius:16px;
+  box-shadow:0 2px 16px rgba(0,0,0,.07);
+  border:1px solid var(--gray-200);
+  overflow:hidden;
+  transition:all .3s ease;
+  display:block;
+}
+.article-card:hover { transform:translateY(-8px); box-shadow:0 12px 40px rgba(0,0,0,.13); border-color:var(--primary); }
+
+.article-card-img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+
+.article-card-body { padding:22px; }
+.article-card-body h3 { font-size:17px; font-weight:700; color:var(--dark); margin-bottom:10px; line-height:1.4; }
+.article-card-date { font-size:12px; font-weight:600; color:var(--gray-500); letter-spacing:.8px; text-transform:uppercase; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 14: CTA
+   ══════════════════════════════════════════════════════════════ */
+
+.cta {
+  background:var(--gradient-2);
+  padding:90px 0;
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+}
+.cta .animated-bg { opacity:.4; }
+.cta-content { max-width:900px; margin:0 auto; padding:0 24px; position:relative; z-index:10; }
+
+.cta-title {
+  font-family:var(--font-display);
+  font-size:clamp(30px,5vw,60px);
+  font-weight:900;
+  color:#111;
+  margin-bottom:25px;
+  line-height:1.2;
+}
+.cta-desc { font-size:clamp(16px,2vw,20px); color:#333; margin-bottom:48px; line-height:1.8; }
+
+.cta-buttons { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+.cta-buttons .btn-cta-primary {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 32px;
+  background:var(--white); color:#111827;
+  border:2px solid #111827;
+  border-radius:var(--radius-full);
+  font-size:14px; font-weight:600;
+  text-transform:uppercase; letter-spacing:.5px;
+  transition:all var(--transition-base);
+}
+.cta-buttons .btn-cta-primary:hover { background:#111827; color:#fff; }
+
+.cta-buttons .btn-cta-outline {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 32px;
+  background:transparent; color:#111827;
+  border:2px solid #111827;
+  border-radius:var(--radius-full);
+  font-size:14px; font-weight:600;
+  text-transform:uppercase; letter-spacing:.5px;
+  transition:all var(--transition-base);
+}
+.cta-buttons .btn-cta-outline:hover { background:#111827; color:#fff; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 15: FOOTER
+   ══════════════════════════════════════════════════════════════ */
+
+.footer { background:#ffffff; color:#111; padding:60px 0 0; border-top:1px solid #eaeaea; }
+
+.footer-grid {
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 40px;
+  display:grid;
+  grid-template-columns:2fr 1fr 1.5fr;
+  gap:60px;
+  align-items:start;
+}
+
+.footer-logo { max-width:180px; height:auto; margin-bottom:18px; }
+
+.footer-col h3 { font-size:20px; font-weight:700; margin-bottom:22px; font-family:var(--font-display); color:#111; }
+.footer-col p  { font-size:15px; color:#555; line-height:1.8; }
+
+.footer-col a { display:block; font-size:15px; color:#444; margin-bottom:13px; transition:.25s ease; }
+.footer-col a:hover { color:#ff7a18; transform:translateX(5px); }
+
+.footer-subscribe { max-width:380px; width:100%; }
+.footer-subscribe h4 { font-size:16px; margin-bottom:14px; font-weight:600; color:#111; }
+
+.subscribe-box {
+  display:flex; align-items:center;
+  width:100%;
+  border:2px solid #e0e0e0;
+  border-radius:50px;
+  overflow:hidden;
+  background:#f9f9f9;
+}
+.subscribe-box input {
+  flex:1;
+  padding:13px 18px;
+  border:none; outline:none;
+  font-size:14px;
+  background:transparent;
+  min-width:0;
+}
+.subscribe-box button {
+  padding:13px 20px;
+  background:#000; color:#fff;
+  font-size:16px;
+  display:flex; align-items:center; justify-content:center;
+  transition:.3s ease;
+  flex-shrink:0;
+}
+.subscribe-box button:hover { background:#ff7a18; }
+
+.footer-bottom { margin-top:40px; padding:20px 40px; border-top:1px solid #eaeaea; text-align:center; }
+.footer-bottom p { font-size:14px; color:#555; margin:0; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 16: SCROLL TO TOP
+   ══════════════════════════════════════════════════════════════ */
+
+.scroll-top {
+  position:fixed;
+  bottom:32px; right:32px;
+  width:52px; height:52px;
+  background:var(--gradient-1);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--white);
+  font-size:20px;
+  cursor:pointer;
+  opacity:0; visibility:hidden;
+  transition:all var(--transition-bounce);
+  z-index:var(--z-fixed);
+  box-shadow:var(--shadow-primary);
+  border:none;
+}
+.scroll-top.show { opacity:1; visibility:visible; }
+.scroll-top:hover { transform:translateY(-6px) scale(1.1); box-shadow:var(--shadow-primary-lg); }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 17: TOAST
+   ══════════════════════════════════════════════════════════════ */
+
+@keyframes slideDown {
+  from { opacity:0; transform:translateX(-50%) translateY(-20px); }
+  to   { opacity:1; transform:translateX(-50%) translateY(0); }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 18: RESPONSIVE — 1200px
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1200px) {
+  .container { padding:0 30px; }
+  .stats-grid { grid-template-columns:repeat(3,1fr); }
+  .hero-content { gap:50px; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 19: RESPONSIVE — 1024px (TABLET)
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+
+  /* Header */
+  .nav { display:none; }
+  .hamburger { display:flex; }
+  .mobile-menu { display:flex; }
+  .header-main { padding:0 24px; }
+
+  /* Hero */
+  .hero-content { grid-template-columns:1fr; text-align:center; gap:40px; padding:0 24px; }
+  .hero-visual { display:none; }
+  .hero-description { margin:0 auto 40px; }
+  .hero-buttons { justify-content:center; }
+  .hero-badge { justify-content:center; }
+
+  /* Stats */
+  .stats-grid { grid-template-columns:repeat(3,1fr); gap:24px; padding:0 24px; }
+  .stats-header { padding:0 24px; }
+
+  /* Articles */
+  .articles-grid { grid-template-columns:1fr 1fr; padding:0 24px; gap:24px; }
+  .latest-articles .section-header { padding:0 24px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns:1fr 1fr; gap:40px; padding:0 24px; }
+  .footer-col:first-child { max-width:100%; grid-column:1 / -1; }
+  .footer-subscribe { max-width:100%; }
+
+  /* Programs */
+  .affiliate-programs-section { padding:70px 0 80px; }
+  .ap-slider-wrapper { padding:0 50px; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 20: RESPONSIVE — 768px (MOBILE)
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  :root { --header-height:66px; }
+
+  .header-main { padding:0 16px; }
+  .logo img { height:38px; }
+
+  /* Hero */
+  .hero { padding:60px 0; min-height:auto; }
+  .hero-content { padding:0 16px; }
+  .hero-description { font-size:15px; }
+  .hero-buttons { flex-direction:column; align-items:center; }
+  .btn { padding:13px 28px; font-size:13px; }
+
+  /* Stats */
+  .stats { padding:56px 0; }
+  .stats-grid { grid-template-columns:repeat(2,1fr); gap:16px; padding:0 16px; }
+  .stats-header { padding:0 16px; margin-bottom:40px; }
+  .stat-item { padding:28px 14px; }
+
+  /* Articles */
+  .latest-articles { padding:60px 0; }
+  .articles-grid { grid-template-columns:1fr; padding:0 16px; }
+  .latest-articles .section-header { padding:0 16px; margin-bottom:32px; }
+
+  /* Programs */
+  .affiliate-programs-section { padding:56px 0 64px; }
+  .ap-slider-wrapper { padding:0 16px; }
+  .ap-arrow { display:none; }
+  .ap-card { flex:0 0 220px; padding:28px 18px 24px; }
+  .ap-header { padding:0 16px; margin-bottom:32px; }
+
+  /* CTA */
+  .cta { padding:64px 0; }
+  .cta-content { padding:0 16px; }
+
+  /* Clients */
+  .clients { padding:48px 0; }
+  .clients .container { padding:0 16px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns:1fr; gap:32px; padding:0 16px; }
+  .footer-bottom { padding:20px 16px; }
+  .footer-subscribe { max-width:100%; }
+
+  /* Scroll top */
+  .scroll-top { bottom:20px; right:16px; width:46px; height:46px; font-size:18px; }
+
+  /* Section utility */
+  .section { padding:64px 0; }
+  .container { padding:0 16px; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 21: RESPONSIVE — 480px
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns:1fr 1fr; gap:12px; }
+  .stat-item { padding:22px 10px; }
+  .stat-icon { width:48px; height:48px; font-size:20px; }
+
+  .ap-card { flex:0 0 200px; padding:24px 14px 20px; }
+  .ap-card-logo { width:72px; height:72px; }
+  .ap-card-name { font-size:14px; }
+
+  .hero-badge { font-size:12px; padding:8px 14px; }
+  .cta-buttons { flex-direction:column; align-items:center; }
+
+  .mobile-nav-link { font-size:clamp(22px,8vw,32px); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HIDDEN NETLIFY FORM -->
+<form name="footer-subscribe" data-netlify="true" hidden>
+  <input type="email" name="email">
+</form>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HEADER
+     ══════════════════════════════════════════════════════════════ -->
+<header class="header" id="header">
+  <div class="header-main">
+
+    <a href="https://affiliatenetwork.buzz/" class="logo">
+      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="Affiliate Network">
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav">
+      <a href="https://affiliatenetwork.buzz/" class="nav-link active">Home</a>
+      <a href="/" class="nav-link">Affiliates</a>
+      <a href="/" class="nav-link">Advertisers</a>
+      <a href="https://affiliatenetwork.buzz/blog" class="nav-link">Blog</a>
+      <a href="https://www.vcommission.com/case-studies/" class="nav-link">Case Studies</a>
+    </nav>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════════
+     MOBILE MENU OVERLAY
+     ══════════════════════════════════════════════════════════════ -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <nav class="mobile-nav">
+    <a href="https://affiliatenetwork.buzz/" class="mobile-nav-link active">Home</a>
+    <a href="https://www.vcommission.com/affiliates/" class="mobile-nav-link">Affiliates</a>
+    <a href="https://www.vcommission.com/advertisers/" class="mobile-nav-link">Advertisers</a>
+    <a href="https://affiliatenetwork.buzz/blog" class="mobile-nav-link">Blog</a>
+    <a href="https://www.vcommission.com/case-studies/" class="mobile-nav-link">Case Studies</a>
+  </nav>
+  <div class="mobile-menu-footer">© 2026 AffiliateNetwork.buzz</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="animated-bg">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="bg-grid"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <i class="fas fa-trophy"></i>
+        <span>Your Hub for Affiliate Marketing Insights</span>
+      </div>
+      <h1 class="hero-title">
+        Stay Ahead in <span class="hero-title-gradient">Affiliate Marketing</span>
+      </h1>
+      <p class="hero-subtitle">Latest trends, strategies, and tools to help you grow and earn more</p>
+      <p class="hero-description">Explore expert insights, discover top affiliate programs, and stay updated with what's working in affiliate marketing — all in one place.</p>
+      <div class="hero-buttons">
+      
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-decoration hero-decoration-1"></div>
+      <div class="hero-decoration hero-decoration-2"></div>
+      <div class="hero-image">
+        <img src="https://vcim.net/extra_mailer3/281_57ab629e-5da0-468a-8c6e-fc959b0bac86.png" alt="Affiliate Network">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     STATS
+     ══════════════════════════════════════════════════════════════ -->
+<section class="stats">
+  <div class="stats-header">
+    <div class="section-badge">Affiliate Marketing Numbers</div>
+    <h2 class="section-title">These Affiliate Marketing Stats For 2025 <span class="section-title-gradient">Will Shock You</span></h2>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-icon"><i class="fas fa-globe"></i></div>
+      <div class="stat-num">$35B+</div>
+      <div class="stat-label">Global Market Size</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+      <div class="stat-num">15%</div>
+      <div class="stat-label">Annual Growth Rate</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+      <div class="stat-num">Upto 15X</div>
+      <div class="stat-label">Average ROI</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><i class="fas fa-user-check"></i></div>
+      <div class="stat-num">80%+</div>
+      <div class="stat-label">Publisher / Affiliate Adoption</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><i class="fas fa-building"></i></div>
+      <div class="stat-num">81%</div>
+      <div class="stat-label">Brand Adoption Rate</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon"><i class="fas fa-wallet"></i></div>
+      <div class="stat-num">$8K–$10K/m</div>
+      <div class="stat-label">Average Affiliate Earnings</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     LATEST ARTICLES
+     ══════════════════════════════════════════════════════════════ -->
+<section class="latest-articles">
+  <div class="section-header">
+    <div class="section-badge">From Our Blog</div>
+    <h2 class="section-title">Latest <span class="section-title-gradient">Articles</span></h2>
+  </div>
+  <div class="articles-grid">
+    <a href="https://affiliatenetwork.buzz/blog/affiliate-marketing-for-beginners" class="article-card">
+      <img src="https://vcim.net/extra_mailer2/778_blog25march1.png" alt="Affiliate Marketing for Beginners" class="article-card-img">
+      <div class="article-card-body">
+        <h3>Affiliate Marketing for Beginners in 2026: A Practical Guide to Getting Started</h3>
+        <p class="article-card-date">March 25, 2026</p>
+      </div>
+    </a>
+    <a href="https://affiliatenetwork.buzz/blog/best-affiliate-marketing-platforms/" class="article-card">
+      <img src="https://vcim.net/extra_mailer3/508_blogbanner.png" alt="10 Best Affiliate Marketing Platforms" class="article-card-img">
+      <div class="article-card-body">
+        <h3>10 Best Affiliate Marketing Platforms to Grow Your Income in 2026</h3>
+        <p class="article-card-date">March 23, 2026</p>
+      </div>
+    </a>
+    <a href="https://affiliatenetwork.buzz/blog/affiliate-marketing-networks/" class="article-card">
+      <img src="https://www.shoutmeloud.com/wp-content/uploads/2020/09/Best-Affiliate-Networks.jpg" alt="Best Affiliate Marketing Networks" class="article-card-img">
+      <div class="article-card-body">
+        <h3>The List of 10 Best Affiliate Marketing Networks for Easy Commissions</h3>
+        <p class="article-card-date">March 09, 2026</p>
+      </div>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:40px;padding:0 16px;">
+    <a href="https://affiliatenetwork.buzz/Blog"
+       style="font-size:16px;font-weight:700;color:var(--primary);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:gap .3s ease;"
+       onmouseover="this.style.gap='14px'" onmouseout="this.style.gap='8px'">
+      Read More Articles <i class="fas fa-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     TOP AFFILIATE PROGRAMS SLIDER
+     ══════════════════════════════════════════════════════════════ -->
+<section class="affiliate-programs-section">
+  <div class="ap-header">
+    <div class="section-badge">Top Programs</div>
+    <h2 class="section-title">Top <span class="section-title-gradient">Affiliate Programs</span> to Explore</h2>
+    <p class="ap-subtitle">Discover some of the best affiliate programs to boost your earnings.</p>
+  </div>
+  <div class="ap-slider-wrapper">
+    <button class="ap-arrow ap-arrow-left" id="apArrowLeft" aria-label="Scroll left">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="ap-slider" id="apSlider">
+      <div class="ap-card">
+        <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo19-1.png" alt="Amazon"></div>
+        <h3 class="ap-card-name">Amazon Associates</h3>
+        <span class="ap-card-tag tag-blue">Global Market</span>
+        <p class="ap-card-payout">Up to <strong>12%</strong> payout</p>
+      </div>
+      <div class="ap-card">
+        <div class="ap-card-logo"><img src="https://static.vnative.co/images/65c349ed0669b.png" alt="Shopsy"></div>
+        <h3 class="ap-card-name">Shopsy.in</h3>
+        <span class="ap-card-tag tag-orange">High Commission</span>
+        <p class="ap-card-payout">Up to <strong>9%</strong> payout</p>
+      </div>
+      <div class="ap-card">
+        <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo18-1.png" alt="Myntra"></div>
+        <h3 class="ap-card-name">Myntra Partners</h3>
+        <span class="ap-card-tag tag-green">Beginner Friendly</span>
+        <p class="ap-card-payout">Up to <strong>8%</strong> payout</p>
+      </div>
+      <div class="ap-card">
+        <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo6-1.png" alt="Agoda"></div>
+        <h3 class="ap-card-name">Agoda Travel</h3>
+        <span class="ap-card-tag tag-purple">Trusted Network</span>
+        <p class="ap-card-payout">Up to <strong>5%</strong> payout</p>
+      </div>
+      <div class="ap-card">
+        <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo10.png" alt="MakeMyTrip"></div>
+        <h3 class="ap-card-name">MakeMyTrip</h3>
+        <span class="ap-card-tag tag-blue">Global Market</span>
+        <p class="ap-card-payout">Up to <strong>300 INR</strong> payout</p>
+      </div>
+      <div class="ap-card">
+        <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo11.png" alt="GoDaddy"></div>
+        <h3 class="ap-card-name">GoDaddy Affiliates</h3>
+        <span class="ap-card-tag tag-orange">High Commission</span>
+        <p class="ap-card-payout">Up to <strong>7%</strong> payout</p>
+      </div>
+      <div class="ap-card">
+        <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo12.png" alt="Fiverr"></div>
+        <h3 class="ap-card-name">Fiverr Affiliates</h3>
+        <span class="ap-card-tag tag-green">Beginner Friendly</span>
+        <p class="ap-card-payout">Up to <strong>$120</strong> per referral</p>
+      </div>
+      <div class="ap-card">
+        <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo5.png" alt="Walmart"></div>
+        <h3 class="ap-card-name">Walmart Affiliates</h3>
+        <span class="ap-card-tag tag-purple">Trusted Network</span>
+        <p class="ap-card-payout">Up to <strong>5.1%</strong> payout</p>
+      </div>
+      <div class="ap-card">
+        <div class="ap-card-logo"><img src="https://static.vnative.co/images/69a9618b1925c.jpg" alt="Honor"></div>
+        <h3 class="ap-card-name">Honor.com</h3>
+        <span class="ap-card-tag tag-blue">Global Market</span>
+        <p class="ap-card-payout">Up to <strong>4%</strong> payout</p>
+      </div>
+      <div class="ap-card">
+        <div class="ap-card-logo"><img src="https://www.vcommission.com/wp-content/uploads/2020/12/client_logo4.png" alt="Shopee"></div>
+        <h3 class="ap-card-name">Shopee Affiliates</h3>
+        <span class="ap-card-tag tag-orange">High Commission</span>
+        <p class="ap-card-payout">Up to <strong>7%</strong> payout</p>
+      </div>
+    </div>
+    <button class="ap-arrow ap-arrow-right" id="apArrowRight" aria-label="Scroll right">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <div class="ap-bottom-cta">
+    <h3 class="ap-bottom-cta-title">Want access to more affiliate programs?</h3>
+    <a href="https://affiliateprograms.buzz/" class="ap-bottom-cta-btn">Explore Now &rarr;</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     CTA
+     ══════════════════════════════════════════════════════════════ -->
+<section class="cta">
+  <div class="animated-bg">
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-grid"></div>
+  </div>
+  <div class="cta-content">
+    <h2 class="cta-title">Ready To Transform Your Digital Marketing?</h2>
+    <p class="cta-desc">Start your journey into digital marketing and learn the strategies that drive real business growth.</p>
+    <div class="cta-buttons">
+      <a href="https://affiliatemarketing.buzz/blog/digital-marketing/" class="btn-cta-primary">
+        <span>Learn Digital Marketing</span><i class="fas fa-arrow-right"></i>
+      </a>
+    
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     CLIENTS MARQUEE
+     ══════════════════════════════════════════════════════════════ -->
+<section class="clients">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Trusted Networks</div>
+      <h2 class="section-title">Few Of World's <span class="section-title-gradient">Trusted Affiliate Networks</span></h2>
+    </div>
+  </div>
+  <div class="clients-marquee">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/344_VigLink_Primary_Logo_rgb.png" alt="VigLink">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/520_Shoogloo.png" alt="Shoogloo">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/412_icubeswire.png" alt="iCubesWire">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/930_cropped-cropped-vc-new-logo.png" alt="vCommission">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/410_EarnKaro-HD-Logo.png" alt="EarnKaro">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/330_cuelinks-logo-480babd65e83d854133844ad8fbaefefc64c1e2b984225839ff0b85dfd5abc46.png" alt="Cuelinks">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/926_a68e977f-788b-4379-a113-b63561b139b2.png" alt="Network">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/444_1677748032006.png" alt="Network">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/987_26932d09-eae7-4f8f-97ba-47d1e64354d2.png" alt="Network">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/366_08bacb5f-e842-4b54-a202-604bf1bfe06e.png" alt="Network">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/536_4b7c7cff-9981-4d4e-ad31-cd4d0b9ddb00.png" alt="Network">
+    <!-- Duplicate for seamless loop -->
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/344_VigLink_Primary_Logo_rgb.png" alt="VigLink">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/520_Shoogloo.png" alt="Shoogloo">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/412_icubeswire.png" alt="iCubesWire">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/930_cropped-cropped-vc-new-logo.png" alt="vCommission">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/410_EarnKaro-HD-Logo.png" alt="EarnKaro">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/330_cuelinks-logo-480babd65e83d854133844ad8fbaefefc64c1e2b984225839ff0b85dfd5abc46.png" alt="Cuelinks">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/926_a68e977f-788b-4379-a113-b63561b139b2.png" alt="Network">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/444_1677748032006.png" alt="Network">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/987_26932d09-eae7-4f8f-97ba-47d1e64354d2.png" alt="Network">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/366_08bacb5f-e842-4b54-a202-604bf1bfe06e.png" alt="Network">
+    <img class="client-logo" src="https://vcim.net/extra_mailer3/536_4b7c7cff-9981-4d4e-ad31-cd4d0b9ddb00.png" alt="Network">
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="Affiliate Network" class="footer-logo">
+      <p>Stay ahead in affiliate marketing with the latest trends, strategies, and tools. Discover top affiliate programs and expert insights to grow and earn more online.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="https://affiliatenetwork.buzz/">Home</a>
+      <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+      <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+      <a href="https://affiliatenetwork.buzz/blog">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-subscribe">
+        <h4>Subscribe to our email alerts!</h4>
+        <div class="subscribe-box">
+          <input type="email" name="email" id="footerEmail" placeholder="Enter your email" required>
+          <button type="button" onclick="handleSubscribe()"><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <p id="footer-msg" style="margin-top:10px;font-size:13px;display:none;"></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AffiliateNetwork.buzz — All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- ══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+     ══════════════════════════════════════════════════════════════ -->
+<script>
+
+/* ── Prevent resubmission ── */
+if (window.history.replaceState) {
+  window.history.replaceState(null, null, window.location.href);
+}
+
+/* ── Header scroll + scroll-to-top ── */
+window.addEventListener('scroll', function () {
+  var s = window.scrollY;
+  if (s > 60) document.getElementById('header').classList.add('scrolled');
+  else document.getElementById('header').classList.remove('scrolled');
+  if (s > 400) document.getElementById('scrollTop').classList.add('show');
+  else document.getElementById('scrollTop').classList.remove('show');
+});
+
+/* ══════════════════════════════════════════════════════════════
+   HAMBURGER / MOBILE MENU
+   ══════════════════════════════════════════════════════════════ */
+var hamburger   = document.getElementById('hamburger');
+var mobileMenu  = document.getElementById('mobileMenu');
+var isMenuOpen  = false;
+
+function openMenu() {
+  isMenuOpen = true;
+  hamburger.classList.add('active');
+  hamburger.setAttribute('aria-expanded', 'true');
+  mobileMenu.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+  isMenuOpen = false;
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', function () {
+  if (isMenuOpen) closeMenu(); else openMenu();
+});
+
+document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+  link.addEventListener('click', closeMenu);
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && isMenuOpen) closeMenu();
+});
+
+window.addEventListener('resize', function () {
+  if (window.innerWidth > 1024 && isMenuOpen) closeMenu();
+});
+
+/* ── Smooth scroll for anchors ── */
+document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior:'smooth', block:'start' });
+  });
+});
+
+/* ── Parallax hero decorations ── */
+document.addEventListener('mousemove', function (e) {
+  var mouseX = e.clientX / window.innerWidth;
+  var mouseY = e.clientY / window.innerHeight;
+  document.querySelectorAll('.hero-decoration').forEach(function (d, i) {
+    var speed = (i + 1) * 30;
+    d.style.transform = 'translate(' + (mouseX - 0.5) * speed + 'px,' + (mouseY - 0.5) * speed + 'px)';
+  });
+});
+
+/* ── Footer subscribe ── */
+function handleSubscribe() {
+  var input = document.getElementById('footerEmail');
+  var msg   = document.getElementById('footer-msg');
+  var email = input.value.trim();
+  if (!email) {
+    msg.style.display = 'block'; msg.style.color = 'red';
+    msg.textContent = 'Please enter your email address.'; return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    msg.style.display = 'block'; msg.style.color = 'red';
+    msg.textContent = 'Please enter a valid email address.'; return;
+  }
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ 'form-name': 'footer-subscribe', email: email }).toString()
+  })
+  .then(function () {
+    msg.style.display = 'block'; msg.style.color = 'green';
+    msg.textContent = 'Thank you for subscribing!';
+    input.value = '';
+    window.history.replaceState(null, null, window.location.href);
+    setTimeout(function () { msg.style.display = 'none'; }, 3000);
+  })
+  .catch(function () {
+    msg.style.display = 'block'; msg.style.color = 'red';
+    msg.textContent = 'Something went wrong. Please try again.';
+  });
+}
+
+document.getElementById('footerEmail').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') { e.preventDefault(); handleSubscribe(); }
+});
+
+/* ── Toast ── */
+function showPopup(message, type) {
+  var existing = document.getElementById('newsletter-popup');
+  if (existing) existing.remove();
+  var popup = document.createElement('div');
+  popup.id = 'newsletter-popup';
+  popup.textContent = (type === 'success' ? '✅ ' : '⚠️ ') + message;
+  popup.style.cssText = 'position:fixed;top:30px;left:50%;transform:translateX(-50%);background:' +
+    (type === 'success' ? '#22c55e' : '#ef4444') +
+    ';color:#fff;padding:16px 32px;border-radius:12px;font-size:15px;font-weight:600;z-index:99999;box-shadow:0 8px 30px rgba(0,0,0,.2);animation:slideDown .3s ease;white-space:nowrap;';
+  document.body.appendChild(popup);
+  setTimeout(function () {
+    popup.style.opacity = '0';
+    popup.style.transition = 'opacity .3s ease';
+    setTimeout(function () { popup.remove(); }, 300);
+  }, 3000);
+}
+
+</script>
+
+<!-- AFFILIATE PROGRAMS SLIDER JS -->
+<script>
+(function () {
+  var slider      = document.getElementById('apSlider');
+  var arrowLeft   = document.getElementById('apArrowLeft');
+  var arrowRight  = document.getElementById('apArrowRight');
+  var scrollAmount = 290;
+  var originalCards = slider.querySelectorAll('.ap-card');
+  var totalOriginalWidth = 0;
+
+  originalCards.forEach(function (card) {
+    var clone = card.cloneNode(true);
+    slider.appendChild(clone);
+    totalOriginalWidth += card.offsetWidth + 24;
+  });
+
+  function checkLoop() {
+    if (slider.scrollLeft >= totalOriginalWidth) {
+      slider.style.scrollBehavior = 'auto';
+      slider.scrollLeft -= totalOriginalWidth;
+      slider.style.scrollBehavior = 'smooth';
+    }
+    if (slider.scrollLeft <= 0 && slider.scrollLeft < 0) {
+      slider.style.scrollBehavior = 'auto';
+      slider.scrollLeft += totalOriginalWidth;
+      slider.style.scrollBehavior = 'smooth';
+    }
+  }
+
+  slider.addEventListener('scroll', checkLoop);
+  arrowLeft.addEventListener('click',  function () { slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' }); });
+  arrowRight.addEventListener('click', function () { slider.scrollBy({ left:  scrollAmount, behavior: 'smooth' }); });
+
+  var isHovering = false;
+  var autoInterval = setInterval(function () {
+    if (!isHovering) slider.scrollLeft += 1;
+  }, 30);
+
+  [slider, arrowLeft, arrowRight].forEach(function (el) {
+    el.addEventListener('mouseenter', function () { isHovering = true;  });
+    el.addEventListener('mouseleave', function () { isHovering = false; });
+  });
+
+  /* Touch support */
+  var touchStartX = 0, touchScrollStart = 0;
+  slider.addEventListener('touchstart', function (e) {
+    touchStartX    = e.touches[0].clientX;
+    touchScrollStart = slider.scrollLeft;
+    isHovering = true;
+  }, { passive: true });
+  slider.addEventListener('touchmove', function (e) {
+    slider.scrollLeft = touchScrollStart + (touchStartX - e.touches[0].clientX);
+  }, { passive: true });
+  slider.addEventListener('touchend', function () { isHovering = false; });
+})();
+</script>
+
+</body>
+</html>
