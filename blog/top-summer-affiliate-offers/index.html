@@ -72,89 +72,6 @@ a { text-decoration: none; color: inherit; transition: all var(--transition-base
 img { max-width: 100%; display: block; height: auto; }
 button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 
-/* ══════════════════════════════════════════════════════════════
-   SECTION 2: HEADER (FROM MAIN PAGE)
-   ══════════════════════════════════════════════════════════════ */
-
-.header {
-  background: rgba(255, 255, 255, .98);
-  backdrop-filter: blur(20px);
-  box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 0;
-  z-index: 1020;
-  transition: all var(--transition-base);
-}
-
-.header.scrolled {
-  box-shadow: var(--shadow-lg);
-  background: rgba(255, 255, 255, 1);
-}
-
-.header-main {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 40px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.logo {
-  position: absolute;
-  left: 40px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  transition: transform var(--transition-base);
-}
-
-.logo:hover { transform: scale(1.05); }
-.logo img { height: 50px; width: auto; }
-
-.nav {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-link {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--gray-700);
-  padding: 8px 0;
-  position: relative;
-  transition: color var(--transition-base);
-  font-family: var(--font-primary);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--gradient-1);
-  transition: width var(--transition-base);
-}
-
-.nav-link:hover,
-.nav-link.active { color: var(--primary); }
-
-.nav-link:hover::after,
-.nav-link.active::after { width: 100%; }
-
-.header-actions {
-  position: absolute;
-  right: 40px;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
 
 /* ══════════════════════════════════════════════════════════════
    SECTION 3: ARTICLE STYLES
@@ -249,184 +166,6 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
   transform: translateY(-6px);
 }
 
-/* ══════════════════════════════════════════════════════════════
-   SECTION 4: FOOTER (FROM MAIN PAGE)
-   ══════════════════════════════════════════════════════════════ */
-
-.footer {
-  background: #ffffff;
-  color: #111;
-  padding: 50px 0 0;
-  position: relative;
-  border-top: 1px solid #eaeaea;
-}
-
-.footer-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.footer-col:first-child { max-width: 420px; }
-
-.footer-col h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 25px;
-  font-family: var(--font-display);
-  color: #111;
-}
-
-.footer-col p {
-  font-size: 17px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 0;
-}
-
-.footer-col a {
-  display: block;
-  font-size: 16px;
-  color: #444;
-  margin-bottom: 14px;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-
-.footer-col a:hover {
-  color: #ff7a18;
-  transform: translateX(5px);
-}
-
-.footer-subscribe {
-  margin-top: 10px;
-  max-width: 380px;
-  width: 100%;
-}
-
-.footer-subscribe h4 {
-  font-size: 17px;
-  margin-bottom: 12px;
-  font-weight: 600;
-  color: #111;
-}
-
-.subscribe-box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border: 2px solid #e0e0e0;
-  border-radius: 50px;
-  overflow: hidden;
-  background: #f9f9f9;
-}
-
-.subscribe-box input {
-  flex: 1;
-  padding: 14px 18px;
-  border: none;
-  outline: none;
-  font-size: 15px;
-  font-family: var(--font-primary);
-  background: transparent;
-  min-width: 0;
-}
-
-.subscribe-box button {
-  padding: 14px 20px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-}
-
-.subscribe-box button:hover { background: #ff7a18; }
-
-.footer-bottom {
-  max-width: 100%;
-  margin: 25px 0 0;
-  padding: 20px 40px;
-  border-top: 1px solid #eaeaea;
-  text-align: center;
-}
-
-.footer-bottom p {
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-}
-
-/* ══════════════════════════════════════════════════════════════
-   SECTION 5: SCROLL TO TOP
-   ══════════════════════════════════════════════════════════════ */
-
-.scroll-top {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  width: 60px;
-  height: 60px;
-  background: var(--gradient-1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  font-size: 24px;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all var(--transition-bounce);
-  z-index: 1030;
-  box-shadow: var(--shadow-primary);
-}
-
-.scroll-top.show { opacity: 1; visibility: visible; }
-
-.scroll-top:hover {
-  transform: translateY(-8px) scale(1.1);
-  box-shadow: var(--shadow-primary-lg);
-}
-
-/* ══════════════════════════════════════════════════════════════
-   SECTION 6: RESPONSIVE
-   ══════════════════════════════════════════════════════════════ */
-
-@media (max-width: 1024px) {
-  .nav { display: none; }
-  .menu-toggle { display: flex; }
-}
-
-@media (max-width: 900px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-  .footer-col:first-child {
-    max-width: 100%;
-    grid-column: 1 / -1;
-  }
-  .footer-subscribe { max-width: 100%; }
-}
-
-@media (max-width: 768px) {
-  .header-main { padding: 0 20px; height: 70px; }
-  .article-title { font-size: 1.8rem; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bottom { padding: 20px; }
-  .scroll-top { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 20px; }
-  .small-cta-btn { padding: 12px 50px; }
-}
-
 </style>
 </head>
 <body>
@@ -441,21 +180,7 @@ button { cursor: pointer; font-family: inherit; border: none; outline: none; }
 <!-- ══════════════════════════════════════════════════════════════
      HEADER (SAME AS MAIN PAGE)
      ══════════════════════════════════════════════════════════════ -->
-<header class="header" id="header">
-  <div class="header-main">
-    <a href="https://affiliatenetwork.buzz/" class="logo">
-      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="affiliate network">
-    </a>
-    <nav class="nav">
-      <a href="https://affiliatenetwork.buzz/" class="nav-link">Home</a>
-      <a href="https://www.vcommission.com/affiliates/" class="nav-link">Affiliates</a>
-      <a href="https://www.vcommission.com/advertisers/" class="nav-link">Advertisers</a>
-      <a href="https://affiliatenetwork.buzz/blog" class="nav-link active">Blog</a>
-      <a href="https://www.vcommission.com/case-studies/" class="nav-link">Case Studies</a>
-    </nav>
-    <span></span>
-  </div>
-</header>
+<div id="header-placeholder"></div>
 
 
 <!-- ARTICLE -->
@@ -602,110 +327,38 @@ class="main-image">
 <!-- ══════════════════════════════════════════════════════════════
      FOOTER (SAME AS MAIN PAGE)
      ══════════════════════════════════════════════════════════════ -->
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-col">
-      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="Affiliate Network" style="max-width:180px;height:auto;margin-bottom:15px;">
-      <p>Stay ahead in affiliate marketing with the latest trends, strategies, and tools. Discover top affiliate programs and expert insights to grow and earn more online.</p>
-    </div>
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <a href="https://affiliatenetwork.buzz/">Home</a>
-      <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
-      <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
-      <a href="https://affiliatenetwork.buzz/blog">Blog</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-subscribe">
-        <h4>Subscribe to our email alerts!</h4>
-        <div>
-          <div class="subscribe-box">
-            <input type="email" name="email" id="footerEmail" placeholder="Email" required>
-            <button type="button" onclick="handleSubscribe()">&rarr;</button>
-          </div>
-          <p id="footer-msg" style="margin-top:10px;font-size:14px;display:none;"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 AffiliateNetwork.buzz — All Rights Reserved.</p>
-  </div>
-</footer>
-
-<!-- ══════════════════════════════════════════════════════════════
-     SCROLL TO TOP BUTTON
-     ══════════════════════════════════════════════════════════════ -->
-<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-  <i class="fas fa-arrow-up"></i>
-</div>
+<div id="footer-placeholder"></div>
 
 <!-- ══════════════════════════════════════════════════════════════
      JAVASCRIPT
      ══════════════════════════════════════════════════════════════ -->
 <script>
+  fetch('/header.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('header-placeholder').innerHTML = html;
+      const s = document.getElementById('header-placeholder').querySelectorAll('script');
+      s.forEach(o => {
+        const n = document.createElement('script');
+        n.textContent = o.textContent;
+        document.body.appendChild(n);
+        o.remove();
+      });
+    });
 
-if (window.history.replaceState) {
-  window.history.replaceState(null, null, window.location.href);
-}
-
-window.addEventListener('scroll', function() {
-  var s = window.scrollY;
-  var h = document.getElementById('header');
-  var t = document.getElementById('scrollTop');
-  if (s > 100) h.classList.add('scrolled');
-  else h.classList.remove('scrolled');
-  if (s > 500) t.classList.add('show');
-  else t.classList.remove('show');
-});
-
-var menuToggle = document.getElementById('menuToggle');
-if (menuToggle) {
-  menuToggle.addEventListener('click', function() {
-    menuToggle.classList.toggle('active');
-  });
-}
-
-function handleSubscribe() {
-  var input = document.getElementById('footerEmail');
-  var msg = document.getElementById('footer-msg');
-  var email = input.value.trim();
-  if (email === '') {
-    msg.style.display = 'block';
-    msg.style.color = 'red';
-    msg.textContent = 'Please enter your email address.';
-    return;
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    msg.style.display = 'block';
-    msg.style.color = 'red';
-    msg.textContent = 'Please enter a valid email address.';
-    return;
-  }
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams({ 'form-name': 'footer-subscribe', email: email }).toString()
-  })
-  .then(function() {
-    msg.style.display = 'block';
-    msg.style.color = 'green';
-    msg.textContent = 'Thank you for subscribing!';
-    input.value = '';
-    if (window.history.replaceState) window.history.replaceState(null, null, window.location.href);
-    setTimeout(function() { msg.style.display = 'none'; }, 3000);
-  })
-  .catch(function() {
-    msg.style.display = 'block';
-    msg.style.color = 'red';
-    msg.textContent = 'Something went wrong. Please try again.';
-  });
-}
-
-document.getElementById('footerEmail').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') { e.preventDefault(); handleSubscribe(); }
-});
-
+  fetch('/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById('footer-placeholder').innerHTML = html;
+      const s = document.getElementById('footer-placeholder').querySelectorAll('script');
+      s.forEach(o => {
+        const n = document.createElement('script');
+        n.textContent = o.textContent;
+        document.body.appendChild(n);
+        o.remove();
+      });
+    });
 </script>
 </body>
 </html>
+
