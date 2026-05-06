@@ -1,0 +1,653 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatnot Affiliate Program</title>
+<link rel="icon" type="image/png" href="https://vcim.net/extra_mailer3/831_favicon%20(1).png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 1: RESET & VARIABLES
+   ══════════════════════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #FF6B35;
+  --secondary: #FFA600;
+  --dark: #0A0E27;
+  --blue: #0F3460;
+  --gray-700: #4B5563;
+  --gray-600: #6B7280;
+  --white: #FFFFFF;
+  --v-blue: #0056b3;
+  --v-dark: #1a1a1a;
+  --gradient-1: linear-gradient(135deg, var(--primary), var(--secondary));
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .05);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, .12);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-primary: 0 10px 40px rgba(255, 107, 53, .3);
+  --shadow-primary-lg: 0 20px 60px rgba(255, 107, 53, .4);
+  --transition-base: .3s ease;
+  --transition-bounce: .5s cubic-bezier(.34, 1.56, .64, 1);
+  --radius-full: 9999px;
+  --font-primary: 'Poppins', sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
+  --font-article: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--dark);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--gradient-1); border-radius: 10px; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8;
+  color: #333;
+  background: #fff;
+}
+
+a { text-decoration: none; color: inherit; transition: all var(--transition-base); }
+img { max-width: 100%; display: block; height: auto; }
+button { cursor: pointer; font-family: inherit; border: none; outline: none; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 2: HEADER (FROM MAIN PAGE)
+   ══════════════════════════════════════════════════════════════ */
+
+.header {
+  background: rgba(255, 255, 255, .98);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  transition: all var(--transition-base);
+}
+
+.header.scrolled {
+  box-shadow: var(--shadow-lg);
+  background: rgba(255, 255, 255, 1);
+}
+
+.header-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform var(--transition-base);
+}
+
+.logo:hover { transform: scale(1.05); }
+.logo img { height: 50px; width: auto; }
+
+.nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-700);
+  padding: 8px 0;
+  position: relative;
+  transition: color var(--transition-base);
+  font-family: var(--font-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-1);
+  transition: width var(--transition-base);
+}
+
+.nav-link:hover,
+.nav-link.active { color: var(--primary); }
+
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+
+.header-actions {
+  position: absolute;
+  right: 40px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 3: ARTICLE STYLES
+   ══════════════════════════════════════════════════════════════ */
+
+.article-container {
+  max-width: 800px;
+  margin: 70px auto 60px;
+  padding: 0 20px;
+}
+
+.article-category {
+  color: var(--v-blue);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .9rem;
+  letter-spacing: 1px;
+}
+
+.article-title {
+  font-family: var(--font-article);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 10px 0 20px;
+  color: var(--v-dark);
+}
+
+.article-meta {
+  color: #888;
+  font-size: .9rem;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.article-content h2 {
+  font-family: var(--font-article);
+  margin: 40px 0 20px;
+  color: var(--v-dark);
+  font-size: 1.8rem;
+}
+
+.article-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.article-content a {
+  color: var(--v-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.article-content a:hover {
+  text-decoration: underline;
+}
+
+.wp-block-image img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 25px 0;
+  display: block;
+}
+
+.small-cta-btn {
+  display: inline-block;
+  padding: 12px 100px;
+  background: #96BA34;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all .3s ease;
+}
+
+.small-cta-btn:hover {
+  background: #96BA34;
+  color: #ffffff !important;
+  transform: translateY(-6px);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 4: FOOTER (FROM MAIN PAGE)
+   ══════════════════════════════════════════════════════════════ */
+
+.footer {
+  background: #ffffff;
+  color: #111;
+  padding: 50px 0 0;
+  position: relative;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-col:first-child { max-width: 420px; }
+
+.footer-col h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-family: var(--font-display);
+  color: #111;
+}
+
+.footer-col p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 14px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.footer-col a:hover {
+  color: #ff7a18;
+  transform: translateX(5px);
+}
+
+.footer-subscribe {
+  margin-top: 10px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.footer-subscribe h4 {
+  font-size: 17px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #111;
+}
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.subscribe-box input {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-family: var(--font-primary);
+  background: transparent;
+  min-width: 0;
+}
+
+.subscribe-box button {
+  padding: 14px 20px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.subscribe-box button:hover { background: #ff7a18; }
+
+.footer-bottom {
+  max-width: 100%;
+  margin: 25px 0 0;
+  padding: 20px 40px;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 5: SCROLL TO TOP
+   ══════════════════════════════════════════════════════════════ */
+
+.scroll-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-bounce);
+  z-index: 1030;
+  box-shadow: var(--shadow-primary);
+}
+
+.scroll-top.show { opacity: 1; visibility: visible; }
+
+.scroll-top:hover {
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: var(--shadow-primary-lg);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 6: RESPONSIVE
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .nav { display: none; }
+  .menu-toggle { display: flex; }
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .footer-col:first-child {
+    max-width: 100%;
+    grid-column: 1 / -1;
+  }
+  .footer-subscribe { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .header-main { padding: 0 20px; height: 70px; }
+  .article-title { font-size: 1.8rem; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { padding: 20px; }
+  .scroll-top { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 20px; }
+  .small-cta-btn { padding: 12px 50px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HIDDEN NETLIFY FORMS
+     ══════════════════════════════════════════════════════════════ -->
+<form hidden method='post' name='footer-subscribe'><input type='hidden' name='form-name' value='footer-subscribe' />
+  <input type="email" name="email">
+</form>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HEADER (SAME AS MAIN PAGE)
+     ══════════════════════════════════════════════════════════════ -->
+<header class="header" id="header">
+  <div class="header-main">
+    <a href="https://affiliatenetwork.buzz/" class="logo">
+      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="affiliate network">
+    </a>
+    <nav class="nav">
+      <a href="https://affiliatenetwork.buzz/" class="nav-link">Home</a>
+      <a href="https://www.vcommission.com/affiliates/" class="nav-link">Affiliates</a>
+      <a href="https://www.vcommission.com/advertisers/" class="nav-link">Advertisers</a>
+      <a href="https://affiliatenetwork.buzz/blog" class="nav-link active">Blog</a>
+      <a href="https://www.vcommission.com/case-studies/" class="nav-link">Case Studies</a>
+    </nav>
+    <span></span>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════════
+     article
+     ══════════════════════════════════════════════════════════════ -->
+
+
+    <article class="article-container">
+        <h1 class="article-title">Whatnot Affiliate Program: Capitalize on High-Intent Buyers Through Live Auctions </h1>
+        
+        <div class="article-meta">Published on February 9, 2026 | By Vipul Gupta</div>
+
+        <div class="article-content">
+         <p>
+Live shopping and real-time auctions are rapidly becoming one of the most engaging ways people shop online — and this trend is creating solid opportunities for affiliates. Instead of static pages with “Buy Now” buttons, platforms like Whatnot bring products to life via dynamic live shows where buyers can bid in real time and make purchases impulsively. For publishers earning through a trusted <strong><a href="https://www.vcommission.com/">affiliate marketing network</a></strong>, the Whatnot Affiliate Program gives you a chance to tap into this high-intent buying behavior and earn commissions from audiences who are actively watching and participating in live auctions.
+</p>
+
+<hr>
+
+<h2>About Whatnot and How the Affiliate Campaign Works</h2>
+
+<p>
+Whatnot is a live shopping marketplace that hosts real-time auctions and interactive shopping experiences. Users join shows, watch products being presented live, and place bids in the moment — which drives urgency and faster purchase decisions. The platform covers a wide range of categories, and this engaging auction format helps keep buyers invested until the final bid is placed.
+
+</p>
+    <figure class="wp-block-image size-large">
+        <img src="https://www.vcommission.com/wp-content/uploads/2026/02/Screenshot-2026-02-06-115910.png" alt="Whatnot Campaign" class="main-image">
+    </figure>
+
+<p>
+For affiliates, Whatnot’s campaign offers features designed to convert well with audiences that already enjoy live content:<br><br>
+
+• Real-time tracking so you can monitor clicks and conversions as they happen<br>
+• 3-day cookie window, which matches the quick buying cycle of live auctions<br>
+• Deep linking that sends viewers directly to an active auction or relevant page<br>
+• Multiple conversions allowed per user, increasing earning potential<br>
+• Payouts of up to ~10%, making it competitive among related offers and appealing if you’re promoting in spaces with fast buying intent
+</p>
+
+
+
+<p>
+Because this campaign attracts users with high purchase motivation, it fits well among other performance-focused offers available on affiliate marketing India platforms and global networks alike.
+</p>
+
+<hr>
+
+<h2>Best Promo Methods for Whatnot</h2>
+
+<p>
+The live shopping nature of Whatnot means your promotional approach should reflect the urgency and energy of the auctions. Some effective methods include:<br><br>
+
+• <strong>Short video content —</strong> Instagram Reels, YouTube Shorts, and TikTok are great for showcasing live auction teasers or bidding action.<br>
+• <strong>Influencer posts —</strong> Casual, real-time stories about current auctions can drive interest.<br>
+• <strong>Quick notifications —</strong> Telegram updates or push/pop notifications with lines like “Auction live now!” work well.<br>
+• <strong>Email reminders —</strong> Short messages with direct links to live shows promote urgency.<br>
+• <strong>Coupon and cashback angles —</strong> If available, mention discounts or rewards to make bids more tempting.<br>
+• <strong>Software and deal traffic —</strong> Alerts about active auctions or price drops can capture users already browsing for offers.<br>
+</p>
+<p>
+These methods are especially useful when your content matches the live and fast-paced nature of Whatnot’s shopping experience, helping you turn interest into action.
+</p>
+
+<hr>
+
+<h2>Who Can Promote This Offer?</h2>
+
+<p>
+Because the Whatnot Affiliate Program thrives on dynamic engagement, it’s ideal for affiliates who already produce or distribute content that resonates with active buyers. For example:<br><br>
+
+• Content creators on short-form video platforms — Show clips from live auctions or bidding highlights.<br>
+• Influencers and social promoters — Share live event links with audiences ready to act fast.Email marketers with business-focused audiences<br>
+• Deal and auction pages — Visitors looking for bargains may respond well to live bid notifications.Telegram channel owners in blogging or startups<br>
+• Email/SMS lists focused on deals — Quick reminders for auctions tap into user intent<br>
+
+</p>
+
+<p>
+Because Whatnot itself is not limited to a single niche — it spans collectibles, fashion, gadgets, and more — your promotions can be tailored to match your audience’s interests and auction categories.</p>
+
+<hr>
+
+<h2>Conclusion</h2>
+
+<p>
+The Whatnot Affiliate Program offers a unique way to tap into the growth of live shopping and convert high-intent viewers into commissions. When promoted through a supportive <strong><a href="https://www.vcommission.com/">affiliate marketing agency</a></strong> or performance partner that helps you optimize tracking, creatives, and campaign strategies, this program can become a valuable part of your portfolio. With real-time auctions, short cookie windows that align with purchase urgency, and multiple ways to engage audiences, Whatnot provides affiliates with a fresh angle on monetizing traffic — especially for publishers ready to match their content with the platform’s exciting live experience.</p>
+
+
+</div>
+        </div>
+    </article>
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER (SAME AS MAIN PAGE)
+     ══════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="Affiliate Network" style="max-width:180px;height:auto;margin-bottom:15px;">
+      <p>Stay ahead in affiliate marketing with the latest trends, strategies, and tools. Discover top affiliate programs and expert insights to grow and earn more online.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="https://affiliatenetwork.buzz/">Home</a>
+      <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+      <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+      <a href="https://affiliatenetwork.buzz/blog">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-subscribe">
+        <h4>Subscribe to our email alerts!</h4>
+        <div>
+          <div class="subscribe-box">
+            <input type="email" name="email" id="footerEmail" placeholder="Email" required>
+            <button type="button" onclick="handleSubscribe()">&rarr;</button>
+          </div>
+          <p id="footer-msg" style="margin-top:10px;font-size:14px;display:none;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AffiliateNetwork.buzz — All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SCROLL TO TOP BUTTON
+     ══════════════════════════════════════════════════════════════ -->
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+     ══════════════════════════════════════════════════════════════ -->
+<script>
+
+if (window.history.replaceState) {
+  window.history.replaceState(null, null, window.location.href);
+}
+
+window.addEventListener('scroll', function() {
+  var s = window.scrollY;
+  var h = document.getElementById('header');
+  var t = document.getElementById('scrollTop');
+  if (s > 100) h.classList.add('scrolled');
+  else h.classList.remove('scrolled');
+  if (s > 500) t.classList.add('show');
+  else t.classList.remove('show');
+});
+
+var menuToggle = document.getElementById('menuToggle');
+if (menuToggle) {
+  menuToggle.addEventListener('click', function() {
+    menuToggle.classList.toggle('active');
+  });
+}
+
+function handleSubscribe() {
+  var input = document.getElementById('footerEmail');
+  var msg = document.getElementById('footer-msg');
+  var email = input.value.trim();
+  if (email === '') {
+    msg.style.display = 'block';
+    msg.style.color = 'red';
+    msg.textContent = 'Please enter your email address.';
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    msg.style.display = 'block';
+    msg.style.color = 'red';
+    msg.textContent = 'Please enter a valid email address.';
+    return;
+  }
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ 'form-name': 'footer-subscribe', email: email }).toString()
+  })
+  .then(function() {
+    msg.style.display = 'block';
+    msg.style.color = 'green';
+    msg.textContent = 'Thank you for subscribing!';
+    input.value = '';
+    if (window.history.replaceState) window.history.replaceState(null, null, window.location.href);
+    setTimeout(function() { msg.style.display = 'none'; }, 3000);
+  })
+  .catch(function() {
+    msg.style.display = 'block';
+    msg.style.color = 'red';
+    msg.textContent = 'Something went wrong. Please try again.';
+  });
+}
+
+document.getElementById('footerEmail').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') { e.preventDefault(); handleSubscribe(); }
+});
+
+</script>
+</body>
+</html>
