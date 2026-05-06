@@ -1,0 +1,299 @@
+<!-- ══════════════════════════════════════════════════════════════
+     SHARED FOOTER — affiliatenetwork.buzz (CSS + HTML + JS)
+     ══════════════════════════════════════════════════════════════ -->
+
+<style>
+
+/* ══════════════════════════════════════════════════════════════
+   FOOTER CSS
+   ══════════════════════════════════════════════════════════════ */
+
+.footer {
+  background: #ffffff;
+  color: #111;
+  padding: 60px 0 0;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-logo {
+  max-width: 180px;
+  height: auto;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.footer-col h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  font-family: var(--font-display, 'Rajdhani', sans-serif);
+  color: #111;
+}
+
+.footer-col p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 13px;
+  transition: .25s ease;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: #ff7a18;
+  transform: translateX(5px);
+}
+
+.footer-subscribe {
+  max-width: 380px;
+  width: 100%;
+}
+
+.footer-subscribe h4 {
+  font-size: 16px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.subscribe-box input {
+  flex: 1;
+  padding: 13px 18px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  min-width: 0;
+  font-family: inherit;
+}
+
+.subscribe-box button {
+  padding: 13px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s ease;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.subscribe-box button:hover {
+  background: #ff7a18;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding: 20px 40px;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SCROLL TO TOP
+   ══════════════════════════════════════════════════════════════ */
+
+.scroll-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #FF6B35, #FFA600);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s cubic-bezier(.34,1.56,.64,1);
+  z-index: 1030;
+  box-shadow: 0 10px 40px rgba(255,107,53,.3);
+  border: none;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 20px 60px rgba(255,107,53,.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 24px;
+  }
+  .footer-col:first-child {
+    max-width: 100%;
+    grid-column: 1 / -1;
+  }
+  .footer-subscribe { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 16px;
+  }
+  .footer-bottom { padding: 20px 16px; }
+  .footer-subscribe { max-width: 100%; }
+  .scroll-top { bottom: 20px; right: 16px; width: 46px; height: 46px; font-size: 18px; }
+}
+
+</style>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER HTML
+     ══════════════════════════════════════════════════════════════ -->
+
+<!-- Hidden Netlify form -->
+<form name="footer-subscribe" data-netlify="true" hidden>
+  <input type="email" name="email">
+</form>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="Affiliate Network" class="footer-logo">
+      <p>Stay ahead in affiliate marketing with the latest trends, strategies, and tools. Discover top affiliate programs and expert insights to grow and earn more online.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="https://affiliatenetwork.buzz/">Home</a>
+      <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+      <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+      <a href="https://affiliatenetwork.buzz/blog">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-subscribe">
+        <h4>Subscribe to our email alerts!</h4>
+        <div class="subscribe-box">
+          <input type="email" name="email" id="footerEmail" placeholder="Enter your email" required>
+          <button type="button" id="footerSubBtn"><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <p id="footer-msg" style="margin-top:10px;font-size:13px;display:none;"></p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AffiliateNetwork.buzz — All Rights Reserved.</p>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER JS
+     ══════════════════════════════════════════════════════════════ -->
+
+<script>
+
+  /* ── Scroll to top visibility ── */
+  var _anScrollTop = document.getElementById('scrollTop');
+  if (_anScrollTop) {
+    window.addEventListener('scroll', function() {
+      _anScrollTop.classList.toggle('show', window.scrollY > 400);
+    });
+    _anScrollTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ── Footer subscribe (Netlify) ── */
+  var _anFooterSubBtn = document.getElementById('footerSubBtn');
+  var _anFooterEmail = document.getElementById('footerEmail');
+  var _anFooterMsg = document.getElementById('footer-msg');
+
+  function _anHandleSubscribe() {
+    var email = _anFooterEmail.value.trim();
+    if (!email) {
+      _anFooterMsg.style.display = 'block';
+      _anFooterMsg.style.color = 'red';
+      _anFooterMsg.textContent = 'Please enter your email address.';
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      _anFooterMsg.style.display = 'block';
+      _anFooterMsg.style.color = 'red';
+      _anFooterMsg.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ 'form-name': 'footer-subscribe', email: email }).toString()
+    })
+    .then(function() {
+      _anFooterMsg.style.display = 'block';
+      _anFooterMsg.style.color = 'green';
+      _anFooterMsg.textContent = 'Thank you for subscribing!';
+      _anFooterEmail.value = '';
+      setTimeout(function() { _anFooterMsg.style.display = 'none'; }, 3000);
+    })
+    .catch(function() {
+      _anFooterMsg.style.display = 'block';
+      _anFooterMsg.style.color = 'red';
+      _anFooterMsg.textContent = 'Something went wrong. Please try again.';
+    });
+  }
+
+  if (_anFooterSubBtn) {
+    _anFooterSubBtn.addEventListener('click', _anHandleSubscribe);
+  }
+
+  if (_anFooterEmail) {
+    _anFooterEmail.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') { e.preventDefault(); _anHandleSubscribe(); }
+    });
+  }
+
+</script>

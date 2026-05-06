@@ -1,0 +1,293 @@
+<!-- ══════════════════════════════════════════════════════════════
+     SHARED HEADER — affiliatenetwork.buzz (CSS + HTML + JS)
+     ══════════════════════════════════════════════════════════════ -->
+
+<style>
+
+:root {
+  --primary: #FF6B35;
+  --primary-light: #FF8A5C;
+  --primary-dark: #E65A2E;
+  --secondary: #FFA600;
+  --dark: #0A0E27;
+  --dark-2: #1A1A2E;
+  --gray-700: #4B5563;
+  --gray-100: #F9FAFB;
+  --gray-200: #F3F4F6;
+  --white: #FFFFFF;
+  --gradient-1: linear-gradient(135deg, var(--primary), var(--secondary));
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.05);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,.12);
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  --transition-base: .3s ease;
+  --font-primary: 'Poppins', sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
+  --header-height: 80px;
+  --z-sticky: 1000;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   HEADER
+   ══════════════════════════════════════════════════════════════ */
+
+.header {
+  background: rgba(255,255,255,.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  transition: all var(--transition-base);
+}
+
+.header.scrolled {
+  box-shadow: var(--shadow-lg);
+  background: rgba(255,255,255,1);
+}
+
+.header-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  z-index: 1010;
+  transition: transform var(--transition-base);
+  text-decoration: none;
+}
+.logo:hover { transform: scale(1.05); }
+.logo img { height: 46px; width: auto; max-width: 100%; display: block; }
+
+/* Desktop nav — centered */
+.nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-700);
+  padding: 8px 0;
+  position: relative;
+  white-space: nowrap;
+  transition: color var(--transition-base);
+  text-decoration: none;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: var(--gradient-1);
+  transition: width var(--transition-base);
+}
+.nav-link:hover, .nav-link.active { color: var(--primary); }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1010;
+  border-radius: var(--radius-lg);
+  transition: background var(--transition-base);
+  flex-shrink: 0;
+  border: none;
+}
+.hamburger:hover { background: var(--gray-100); }
+.hamburger span {
+  display: block;
+  width: 24px; height: 2px;
+  background: var(--dark);
+  border-radius: 2px;
+  transition: all .35s cubic-bezier(.34,1.56,.64,1);
+}
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile menu overlay */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,14,39,.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 999;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s ease, visibility .4s ease;
+}
+.mobile-menu.open { opacity: 1; visibility: visible; }
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-display);
+  font-size: clamp(26px,7vw,42px);
+  font-weight: 700;
+  color: rgba(255,255,255,.7);
+  padding: 14px 0;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  letter-spacing: 1px;
+  transition: color var(--transition-base), transform var(--transition-base);
+  text-decoration: none;
+}
+.mobile-nav-link:last-child { border-bottom: none; }
+.mobile-nav-link:hover, .mobile-nav-link.active { color: var(--primary); transform: translateX(8px); }
+
+.mobile-menu-footer {
+  margin-top: 40px;
+  text-align: center;
+  color: rgba(255,255,255,.3);
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nav { display: none; }
+  .hamburger { display: flex; }
+  .mobile-menu { display: flex; }
+  .header-main { padding: 0 24px; }
+}
+
+@media (max-width: 768px) {
+  :root { --header-height: 66px; }
+  .header-main { padding: 0 16px; }
+  .logo img { height: 38px; }
+}
+
+@media (max-width: 480px) {
+  .mobile-nav-link { font-size: clamp(22px,8vw,32px); }
+}
+
+</style>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     HEADER HTML
+     ══════════════════════════════════════════════════════════════ -->
+
+<header class="header" id="header">
+  <div class="header-main">
+    <a href="https://affiliatenetwork.buzz/" class="logo">
+      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="Affiliate Network">
+    </a>
+    <nav class="nav">
+      <a href="https://affiliatenetwork.buzz/" class="nav-link active">Home</a>
+      <a href="https://www.vcommission.com/affiliates/" class="nav-link">Affiliates</a>
+      <a href="https://www.vcommission.com/advertisers/" class="nav-link">Advertisers</a>
+      <a href="https://affiliatenetwork.buzz/blog" class="nav-link">Blog</a>
+      <a href="https://www.vcommission.com/case-studies/" class="nav-link">Case Studies</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <nav class="mobile-nav">
+    <a href="https://affiliatenetwork.buzz/" class="mobile-nav-link active">Home</a>
+    <a href="https://www.vcommission.com/affiliates/" class="mobile-nav-link">Affiliates</a>
+    <a href="https://www.vcommission.com/advertisers/" class="mobile-nav-link">Advertisers</a>
+    <a href="https://affiliatenetwork.buzz/blog" class="mobile-nav-link">Blog</a>
+    <a href="https://www.vcommission.com/case-studies/" class="mobile-nav-link">Case Studies</a>
+  </nav>
+  <div class="mobile-menu-footer">© 2026 AffiliateNetwork.buzz</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     HEADER JS
+     ══════════════════════════════════════════════════════════════ -->
+
+<script>
+
+  /* ── Sticky header ── */
+  var _anHeader = document.getElementById('header');
+  if (_anHeader) {
+    window.addEventListener('scroll', function() {
+      _anHeader.classList.toggle('scrolled', window.scrollY > 60);
+    });
+  }
+
+  /* ── Hamburger / Mobile menu ── */
+  var _anHamburger = document.getElementById('hamburger');
+  var _anMobileMenu = document.getElementById('mobileMenu');
+  var _anMenuOpen = false;
+
+  function _anOpenMenu() {
+    _anMenuOpen = true;
+    _anHamburger.classList.add('active');
+    _anHamburger.setAttribute('aria-expanded', 'true');
+    _anMobileMenu.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function _anCloseMenu() {
+    _anMenuOpen = false;
+    _anHamburger.classList.remove('active');
+    _anHamburger.setAttribute('aria-expanded', 'false');
+    _anMobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (_anHamburger) {
+    _anHamburger.addEventListener('click', function() {
+      if (_anMenuOpen) _anCloseMenu(); else _anOpenMenu();
+    });
+  }
+
+  document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+    link.addEventListener('click', _anCloseMenu);
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && _anMenuOpen) _anCloseMenu();
+  });
+
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 1024 && _anMenuOpen) _anCloseMenu();
+  });
+
+</script>
