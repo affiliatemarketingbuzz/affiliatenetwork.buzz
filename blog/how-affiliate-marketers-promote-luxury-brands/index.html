@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How Affiliate Marketers Build Trust to Promote Luxury Brands Successfully
+</title>
+
+<link rel="icon" type="image/png" href="https://vcim.net/extra_mailer3/831_favicon%20(1).png">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 1: RESET & VARIABLES
+   ══════════════════════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #FF6B35;
+  --secondary: #FFA600;
+  --dark: #0A0E27;
+  --blue: #0F3460;
+  --gray-700: #4B5563;
+  --gray-600: #6B7280;
+  --white: #FFFFFF;
+  --v-blue: #0056b3;
+  --v-dark: #1a1a1a;
+  --gradient-1: linear-gradient(135deg, var(--primary), var(--secondary));
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .05);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, .12);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-primary: 0 10px 40px rgba(255, 107, 53, .3);
+  --shadow-primary-lg: 0 20px 60px rgba(255, 107, 53, .4);
+  --transition-base: .3s ease;
+  --transition-bounce: .5s cubic-bezier(.34, 1.56, .64, 1);
+  --radius-full: 9999px;
+  --font-primary: 'Poppins', sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
+  --font-article: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--dark);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--gradient-1); border-radius: 10px; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8;
+  color: #333;
+  background: #fff;
+}
+
+a { text-decoration: none; color: inherit; transition: all var(--transition-base); }
+img { max-width: 100%; display: block; height: auto; }
+button { cursor: pointer; font-family: inherit; border: none; outline: none; }
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 2: HEADER (FROM MAIN PAGE)
+   ══════════════════════════════════════════════════════════════ */
+
+.header {
+  background: rgba(255, 255, 255, .98);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  transition: all var(--transition-base);
+}
+
+.header.scrolled {
+  box-shadow: var(--shadow-lg);
+  background: rgba(255, 255, 255, 1);
+}
+
+.header-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform var(--transition-base);
+}
+
+.logo:hover { transform: scale(1.05); }
+.logo img { height: 50px; width: auto; }
+
+.nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-700);
+  padding: 8px 0;
+  position: relative;
+  transition: color var(--transition-base);
+  font-family: var(--font-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-1);
+  transition: width var(--transition-base);
+}
+
+.nav-link:hover,
+.nav-link.active { color: var(--primary); }
+
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+
+.header-actions {
+  position: absolute;
+  right: 40px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 3: ARTICLE STYLES
+   ══════════════════════════════════════════════════════════════ */
+
+.article-container {
+  max-width: 800px;
+  margin: 70px auto 60px;
+  padding: 0 20px;
+}
+
+.article-category {
+  color: var(--v-blue);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .9rem;
+  letter-spacing: 1px;
+}
+
+.article-title {
+  font-family: var(--font-article);
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 10px 0 20px;
+  color: var(--v-dark);
+}
+
+.article-meta {
+  color: #888;
+  font-size: .9rem;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.article-content h2 {
+  font-family: var(--font-article);
+  margin: 40px 0 20px;
+  color: var(--v-dark);
+  font-size: 1.8rem;
+}
+
+.article-content p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.article-content a {
+  color: var(--v-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.article-content a:hover {
+  text-decoration: underline;
+}
+
+.wp-block-image img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 25px 0;
+  display: block;
+}
+
+.small-cta-btn {
+  display: inline-block;
+  padding: 12px 100px;
+  background: #96BA34;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all .3s ease;
+}
+
+.small-cta-btn:hover {
+  background: #96BA34;
+  color: #ffffff !important;
+  transform: translateY(-6px);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 4: FOOTER (FROM MAIN PAGE)
+   ══════════════════════════════════════════════════════════════ */
+
+.footer {
+  background: #ffffff;
+  color: #111;
+  padding: 50px 0 0;
+  position: relative;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.footer-col:first-child { max-width: 420px; }
+
+.footer-col h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-family: var(--font-display);
+  color: #111;
+}
+
+.footer-col p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 14px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.footer-col a:hover {
+  color: #ff7a18;
+  transform: translateX(5px);
+}
+
+.footer-subscribe {
+  margin-top: 10px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.footer-subscribe h4 {
+  font-size: 17px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #111;
+}
+
+.subscribe-box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #e0e0e0;
+  border-radius: 50px;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.subscribe-box input {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-family: var(--font-primary);
+  background: transparent;
+  min-width: 0;
+}
+
+.subscribe-box button {
+  padding: 14px 20px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.subscribe-box button:hover { background: #ff7a18; }
+
+.footer-bottom {
+  max-width: 100%;
+  margin: 25px 0 0;
+  padding: 20px 40px;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 5: SCROLL TO TOP
+   ══════════════════════════════════════════════════════════════ */
+
+.scroll-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-bounce);
+  z-index: 1030;
+  box-shadow: var(--shadow-primary);
+}
+
+.scroll-top.show { opacity: 1; visibility: visible; }
+
+.scroll-top:hover {
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: var(--shadow-primary-lg);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 6: RESPONSIVE
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .nav { display: none; }
+  .menu-toggle { display: flex; }
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .footer-col:first-child {
+    max-width: 100%;
+    grid-column: 1 / -1;
+  }
+  .footer-subscribe { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .header-main { padding: 0 20px; height: 70px; }
+  .article-title { font-size: 1.8rem; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { padding: 20px; }
+  .scroll-top { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 20px; }
+  .small-cta-btn { padding: 12px 50px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HIDDEN NETLIFY FORMS
+     ══════════════════════════════════════════════════════════════ -->
+<form name="footer-subscribe" data-netlify="true" hidden>
+  <input type="email" name="email">
+</form>
+
+<!-- ══════════════════════════════════════════════════════════════
+     HEADER (SAME AS MAIN PAGE)
+     ══════════════════════════════════════════════════════════════ -->
+<header class="header" id="header">
+  <div class="header-main">
+    <a href="https://affiliatenetwork.buzz/" class="logo">
+      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="affiliate network">
+    </a>
+    <nav class="nav">
+      <a href="https://affiliatenetwork.buzz/" class="nav-link">Home</a>
+      <a href="https://www.vcommission.com/affiliates/" class="nav-link">Affiliates</a>
+      <a href="https://www.vcommission.com/advertisers/" class="nav-link">Advertisers</a>
+      <a href="https://affiliatenetwork.buzz/blog" class="nav-link active">Blog</a>
+      <a href="https://www.vcommission.com/case-studies/" class="nav-link">Case Studies</a>
+    </nav>
+    <span></span>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+
+<article class="article-container">
+
+<h1 class="article-title">
+How Affiliate Marketers Build Trust to Promote Luxury Brands Successfully
+</h1>
+
+<div class="article-meta">
+Published on March 17, 2026 | By Vipul Gupta
+</div>
+
+<img src="https://www.vcommission.com/wp-content/uploads/2026/03/How-Affiliate-Marketers-Build-Trust-to-Sell-1200x675.jpg"
+class="main-image">
+
+<div class="article-content">
+
+<!-- wp:paragraph -->
+<p>Luxury products require more than just promotion—they require trust. Unlike everyday purchases, customers spend time researching premium brands, understanding product value, and seeking reliable recommendations before making a decision. This makes trust-building a key factor in luxury <a href="https://www.vcommission.com/"><strong>affiliate marketing</strong></a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Affiliate marketers play a major role by creating informative, authentic, and value-driven content. Instead of pushing sales, they focus on educating users through reviews, tutorials, and real-life usage examples. This approach helps users feel confident, informed, and ready to invest in high-end products.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2><strong>1. Tommy Hilfiger</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tommy Hilfiger is a globally recognized fashion brand known for its classic American style and premium appeal. It offers a wide range of apparel and accessories that combine timeless design with modern trends. The brand focuses on quality craftsmanship, which makes it attractive to consumers seeking both style and durability.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Affiliate marketers promote Tommy Hilfiger by creating content that highlights styling versatility and product quality. Instead of direct selling, they showcase how outfits can be styled for different occasions. This helps users visualize the product in real-life scenarios and builds stronger trust.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="https://www.vcommission.com/wp-content/uploads/2026/03/Tommy-Hilfiger-SS.png" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>They also emphasize fabric quality, fit, and brand value through detailed content. By focusing on these aspects, affiliates help users understand why the brand is worth the investment. This approach aligns with luxury buying behavior, where customers prioritize quality and long-term value.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2><strong>2. Levi’s</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Levi’s is one of the most iconic denim brands in the world, known for its heritage and long-lasting products. It offers a variety of fits and styles that appeal to a wide audience. The brand’s strong reputation makes it a trusted choice for customers looking for reliable and stylish denim.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Affiliate marketers build trust by focusing on fit guides, styling tips, and real-life usage. Since denim purchases often depend on comfort and durability, this type of content helps users make informed decisions. It reduces uncertainty and increases confidence in buying.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="https://www.vcommission.com/wp-content/uploads/2026/03/Levis-SS.png" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>They also create comparison content between different fits and styles. This helps users understand which product suits them best. By providing clear and practical insights, affiliates make the decision-making process easier and more trustworthy for potential buyers.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2><strong>3. H&amp;M</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>H&amp;M is a global fashion brand known for its trend-driven collections and fast-changing styles. It appeals to fashion-conscious consumers who want to stay updated with the latest trends. The brand regularly introduces new collections, making it popular among younger audiences.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Affiliate marketers promote H&amp;M by focusing on fashion inspiration and seasonal trends. They create content such as outfit ideas, lookbooks, and styling guides. This helps users see how products can be used in real-life situations and encourages engagement.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="https://www.vcommission.com/wp-content/uploads/2026/03/HM-SS.png" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>By showcasing new arrivals and trending styles, affiliates help users stay updated. This builds trust because users rely on them for fashion inspiration. Instead of pushing products directly, affiliates guide users through trends, making the buying experience more natural.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2><strong>4. MAC Cosmetics</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>MAC Cosmetics is a premium beauty brand known for its professional-quality products and wide shade range. It is widely trusted by makeup artists and beauty enthusiasts. Customers often look for real demonstrations before purchasing beauty products.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Affiliate marketers create tutorials, product demos, and shade comparisons to build trust. These formats allow users to see how products perform in real-life conditions. This is especially important in beauty, where application and results matter.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="https://www.vcommission.com/wp-content/uploads/2026/03/MAc-cosmetics.png" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>They also provide honest reviews and usage tips. This helps users understand product suitability based on their needs. By offering transparent and helpful content, affiliates make it easier for customers to choose the right product confidently.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2><strong>5. Forest Essentials</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Forest Essentials is a luxury Ayurvedic skincare brand that focuses on natural ingredients and traditional formulations. It combines ancient beauty practices with modern presentation. Customers are often interested in ingredient quality and product benefits before purchasing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Affiliate marketers build trust by explaining ingredients and their benefits in detail. They also create skincare routines and usage guides. This helps users understand how the product works and what results to expect.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="https://www.vcommission.com/wp-content/uploads/2026/03/Forest-Essentials-S.png" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Educational content plays a key role in promoting this brand. By breaking down complex information into simple explanations, affiliates make it easier for users to trust the product. This approach works well for luxury skincare, where awareness and understanding are essential.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2><strong>Conclusion</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><a href="https://www.vcommission.com/"><strong>Affiliate marketing programs</strong></a> in the luxury segment is built on trust rather than aggressive selling. Customers rely on detailed content, real experiences, and expert insights before making purchasing decisions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>By focusing on education, authenticity, and value-driven content, affiliate marketers help users move from research to purchase. This trust-based approach not only improves conversions but also creates long-term relationships between brands and customers.</p>
+<!-- /wp:paragraph -->
+
+</div>
+
+</article>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER (SAME AS MAIN PAGE)
+     ══════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <img src="https://vcim.net/extra_mailer3/717_84672e26-5362-45d8-91f7-2f15042ccd14.png" alt="Affiliate Network" style="max-width:180px;height:auto;margin-bottom:15px;">
+      <p>Stay ahead in affiliate marketing with the latest trends, strategies, and tools. Discover top affiliate programs and expert insights to grow and earn more online.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="https://affiliatenetwork.buzz/">Home</a>
+      <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+      <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+      <a href="https://affiliatenetwork.buzz/blog">Blog</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-subscribe">
+        <h4>Subscribe to our email alerts!</h4>
+        <div>
+          <div class="subscribe-box">
+            <input type="email" name="email" id="footerEmail" placeholder="Email" required>
+            <button type="button" onclick="handleSubscribe()">&rarr;</button>
+          </div>
+          <p id="footer-msg" style="margin-top:10px;font-size:14px;display:none;"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AffiliateNetwork.buzz — All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SCROLL TO TOP BUTTON
+     ══════════════════════════════════════════════════════════════ -->
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+     ══════════════════════════════════════════════════════════════ -->
+<script>
+
+if (window.history.replaceState) {
+  window.history.replaceState(null, null, window.location.href);
+}
+
+window.addEventListener('scroll', function() {
+  var s = window.scrollY;
+  var h = document.getElementById('header');
+  var t = document.getElementById('scrollTop');
+  if (s > 100) h.classList.add('scrolled');
+  else h.classList.remove('scrolled');
+  if (s > 500) t.classList.add('show');
+  else t.classList.remove('show');
+});
+
+var menuToggle = document.getElementById('menuToggle');
+if (menuToggle) {
+  menuToggle.addEventListener('click', function() {
+    menuToggle.classList.toggle('active');
+  });
+}
+
+function handleSubscribe() {
+  var input = document.getElementById('footerEmail');
+  var msg = document.getElementById('footer-msg');
+  var email = input.value.trim();
+  if (email === '') {
+    msg.style.display = 'block';
+    msg.style.color = 'red';
+    msg.textContent = 'Please enter your email address.';
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    msg.style.display = 'block';
+    msg.style.color = 'red';
+    msg.textContent = 'Please enter a valid email address.';
+    return;
+  }
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ 'form-name': 'footer-subscribe', email: email }).toString()
+  })
+  .then(function() {
+    msg.style.display = 'block';
+    msg.style.color = 'green';
+    msg.textContent = 'Thank you for subscribing!';
+    input.value = '';
+    if (window.history.replaceState) window.history.replaceState(null, null, window.location.href);
+    setTimeout(function() { msg.style.display = 'none'; }, 3000);
+  })
+  .catch(function() {
+    msg.style.display = 'block';
+    msg.style.color = 'red';
+    msg.textContent = 'Something went wrong. Please try again.';
+  });
+}
+
+document.getElementById('footerEmail').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') { e.preventDefault(); handleSubscribe(); }
+});
+
+</script>
+</body>
+</html>
