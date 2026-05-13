@@ -4,6 +4,9 @@ backend:
 site_url: https://affiliatenetwork.buzz
 display_url: https://affiliatenetwork.buzz
 
+media_folder: ""
+public_folder: ""
+
 collections:
   - name: "blog"
     label: "Blog"
@@ -11,11 +14,14 @@ collections:
     create: true
     slug: "{{slug}}"
 
+    editor:
+      preview: false
+
     fields:
       - { label: "Title", name: "title", widget: "string" }
 
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Meta Description", name: "description", widget: "text" }
 
       - { label: "Featured Image URL", name: "image", widget: "string" }
 
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "HTML Content", name: "body", widget: "markdown" }
