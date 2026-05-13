@@ -1,32 +1,20 @@
 backend:
-  name: git-gateway
+name: git-gateway
 
-site_url: https://affiliatenetwork.buzz
-display_url: https://affiliatenetwork.buzz
+media_folder: "blog/images"
+public_folder: "/blog/images"
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
-    create: true
-    slug: "{{slug}}"
 
-    editor:
-      preview: false
+* name: "blog"
+  label: "Blog"
+  folder: "blog"
+  create: true
+  slug: "{{slug}}"
 
-    fields:
-      - label: Title
-        name: title
-        widget: string
+  fields:
 
-      - label: Meta Description
-        name: description
-        widget: text
-
-      - label: Featured Image URL
-        name: image
-        widget: string
-
-      - label: Body
-        name: body
-        widget: markdown
+  * { label: "Title", name: "title", widget: "string" }
+  * { label: "Description", name: "description", widget: "text" }
+  * { label: "Image URL", name: "image", widget: "string" }
+  * { label: "Body", name: "body", widget: "markdown" }
