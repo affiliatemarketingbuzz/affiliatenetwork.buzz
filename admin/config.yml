@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+
+site_url: https://affiliatenetwork.buzz
+display_url: https://affiliatenetwork.buzz
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+      - { label: "Date", name: "date", widget: "datetime" }
+
+      - { label: "Featured Image URL", name: "image", widget: "string" }
+
+      - { label: "Body", name: "body", widget: "markdown" }
