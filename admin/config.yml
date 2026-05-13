@@ -7,7 +7,7 @@ display_url: https://affiliatenetwork.buzz
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "content/blog"
+    folder: "blog"
     create: true
     slug: "{{slug}}"
 
